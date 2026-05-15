@@ -9,7 +9,6 @@ jobs:
 run-job-curator:
 runs-on: ubuntu-latest
 
-```
 steps:
   - name: Checkout repository
     uses: actions/checkout@v4
@@ -28,4 +27,3 @@ steps:
   - name: Run job curator
     run: |
       python -m src.job_curator.main
-```
