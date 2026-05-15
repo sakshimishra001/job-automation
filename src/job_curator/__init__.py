@@ -1,0 +1,1 @@
+"""Lightweight job curation automation."""

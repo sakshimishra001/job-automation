@@ -1,0 +1,84 @@
+api:
+  base_url: "https://jsearch.p.rapidapi.com/search-v2"
+
+search:
+  source: "linkedin"
+  sources:
+    enabled:
+      - "linkedin"
+      - "naukri"
+      - "indeed"
+      - "glassdoor"
+  source_location: "India"
+  country: "in"
+  pages: 1
+  request_delay_seconds: 5
+  max_queries_per_vertical: 3
+  max_jobs_per_source_query: 15
+  quota_per_vertical: 15
+  minimum_jobs_per_vertical: 8
+  role_queries:
+    Product Management:
+      - "Senior Product Manager"
+      - "Lead Product Manager"
+      - "Director Product Management"
+    Project Management:
+      - "Senior Project Manager"
+      - "Program Manager"
+      - "Delivery Manager"
+    CXO / Executive Leadership:
+      - "Chief Executive Officer"
+      - "Chief Operating Officer"
+      - "Chief Strategy Officer"
+      - "Chief Technology Officer"
+    AI / ML:
+      - "Machine Learning Manager"
+      - "Lead Machine Learning Engineer"
+      - "Senior AI Engineer"
+      - "AI Product Manager"
+    Data Science:
+      - "Senior Data Scientist"
+      - "Lead Data Scientist"
+      - "Analytics Manager"
+    Finance:
+      - "Senior Finance Manager"
+      - "Director Finance"
+      - "FP&A Manager"
+      - "Investment Manager"
+    HR:
+      - "Senior HR Manager"
+      - "Talent Acquisition Manager"
+      - "Head of Human Resources"
+    Cybersecurity:
+      - "Cybersecurity Manager"
+      - "Information Security Manager"
+      - "Security Risk Manager"
+    Senior Management & Strategy Leadership:
+      - "Strategy Manager"
+      - "Business Head"
+      - "General Manager"
+      - "Chief of Staff"
+  locations:
+    - "Bangalore"
+    - "Mumbai"
+    - "Pune"
+    - "Hyderabad"
+    - "Gurgaon"
+    - "Chennai"
+    - "Noida"
+
+output:
+  raw_dir: "data/raw"
+
+operational:
+  state_dir: "data/state"
+  log_dir: "data/logs"
+  seed_state_dir: ""
+  run_state_file: "run_state.json"
+  seen_jobs_file: "seen_jobs.csv"
+  recent_job_window_days: 7
+  seen_retention_days: 14
+
+email:
+  enabled: true
+  subject: "Job Listings - Weekly Summary"
