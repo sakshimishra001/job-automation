@@ -40,13 +40,23 @@ def send_run_summary_email(
 
 
 def load_email_settings(email_config: dict) -> dict:
+    port_value = os.getenv("SMTP_PORT", str(email_config.get("smtp_port", 587))).strip()
+    if not port_value:
+        port_value = str(email_config.get("smtp_port", 587))
+
+    try:
+        port = int(port_value)
+    except ValueError:
+        logger.warning("SMTP_PORT is invalid: %s", port_value)
+        return {}
+
     settings = {
-        "host": os.getenv("SMTP_HOST", email_config.get("smtp_host", "")),
-        "port": int(os.getenv("SMTP_PORT", email_config.get("smtp_port", 587))),
-        "username": os.getenv("SMTP_USERNAME", email_config.get("smtp_username", "")),
-        "password": os.getenv("SMTP_PASSWORD", email_config.get("smtp_password", "")),
-        "from_address": os.getenv("EMAIL_FROM", email_config.get("from", "")),
-        "to_address": os.getenv("EMAIL_TO", email_config.get("to", "")),
+        "host": os.getenv("SMTP_HOST", email_config.get("smtp_host", "")).strip(),
+        "port": port,
+        "username": os.getenv("SMTP_USERNAME", email_config.get("smtp_username", "")).strip(),
+        "password": os.getenv("SMTP_PASSWORD", email_config.get("smtp_password", "")).strip(),
+        "from_address": os.getenv("EMAIL_FROM", email_config.get("from", "")).strip(),
+        "to_address": os.getenv("EMAIL_TO", email_config.get("to", "")).strip(),
     }
 
     required = ["host", "username", "password", "from_address", "to_address"]
