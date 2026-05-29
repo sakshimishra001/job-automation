@@ -60,7 +60,12 @@ def load_email_settings(email_config: dict) -> dict:
     }
 
     required = ["host", "username", "password", "from_address", "to_address"]
-    if any(not settings[field] for field in required):
+    missing_fields = [field for field in required if not settings[field]]
+    if missing_fields:
+        logger.warning(
+            "Missing email settings fields: %s",
+            ", ".join(missing_fields),
+        )
         return {}
 
     return settings

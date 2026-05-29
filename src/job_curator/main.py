@@ -1,7 +1,12 @@
 import logging
 from pathlib import Path
 
-from src.job_curator.classify import classify_seniority_for_jobs, set_vertical_for_jobs
+from src.job_curator.classify import (
+    classify_seniority_for_jobs,
+    select_jobs_by_experience_bucket,
+    set_vertical_for_jobs,
+    validate_jobs_for_vertical,
+)
 from src.job_curator.dedupe import deduplicate_jobs
 from src.job_curator.email_summary import send_run_summary_email
 from src.job_curator.export_csv import export_vertical_jobs_to_csv
@@ -10,10 +15,13 @@ from src.job_curator.fetch_jobs import (
     build_vertical_queries,
     fetch_jobs_for_queries,
 )
-from src.job_curator.filters import keep_approved_publishers, keep_india_jobs
+from src.job_curator.filters import (
+    annotate_location_scope_for_jobs,
+    keep_approved_publishers,
+    keep_supported_location_scope_jobs,
+)
 from src.job_curator.operational_state import (
-    build_recent_jobs_cutoff,
-    keep_fresh_jobs,
+    keep_fresh_jobs_by_bucket,
     load_run_state,
     load_seen_jobs,
     save_run_state,
@@ -68,6 +76,16 @@ def main() -> None:
     seen_jobs_path = state_dir / operational_config.get("seen_jobs_file", "seen_jobs.csv")
     recent_job_window_days = int(operational_config.get("recent_job_window_days", 7))
     seen_retention_days = int(operational_config.get("seen_retention_days", 14))
+    curation_config = config.get("curation", {})
+    bucket_quotas = curation_config.get(
+        "experience_bucket_quotas",
+        {"Junior": 2, "Mid": 4, "Senior": 5, "Executive": 4},
+    )
+    vertical_validation_min_score = int(curation_config.get("vertical_validation_min_score", 1))
+    freshness_windows_by_bucket = curation_config.get(
+        "freshness_window_days_by_bucket",
+        {"Junior": 3, "Mid": 7, "Senior": 14, "Executive": 30},
+    )
 
     run_started_at = utc_now()
     seed_state_files(
@@ -77,10 +95,9 @@ def main() -> None:
     )
     load_run_state(run_state_path)
     seen_jobs = load_seen_jobs(seen_jobs_path)
-    freshness_cutoff = build_recent_jobs_cutoff(run_started_at, recent_job_window_days)
     logger.info(
-        "Keeping jobs posted or fetched in the last %s days",
-        recent_job_window_days,
+        "Keeping jobs using dynamic freshness windows by bucket: %s",
+        freshness_windows_by_bucket,
     )
 
     verticals = search_config["role_queries"].keys()
@@ -103,12 +120,19 @@ def main() -> None:
             break
 
         fetched_count = len(jobs)
-        jobs = keep_fresh_jobs(jobs, freshness_cutoff)
-        fresh_count = len(jobs)
-        jobs = keep_india_jobs(jobs)
         jobs = keep_approved_publishers(jobs)
         jobs = classify_seniority_for_jobs(jobs)
-        jobs = keep_mid_senior_jobs(jobs)
+        jobs = keep_fresh_jobs_by_bucket(
+            jobs,
+            run_started_at,
+            freshness_windows_by_bucket,
+            recent_job_window_days,
+        )
+        fresh_count = len(jobs)
+        jobs = annotate_location_scope_for_jobs(jobs)
+        jobs = keep_supported_location_scope_jobs(jobs)
+        jobs = validate_jobs_for_vertical(jobs, vertical, min_score=vertical_validation_min_score)
+        jobs = keep_supported_experience_jobs(jobs)
         jobs = set_vertical_for_jobs(jobs, vertical)
         jobs = deduplicate_jobs(jobs)
         before_seen_count = len(jobs)
@@ -119,7 +143,11 @@ def main() -> None:
             run_started_at,
         )
         after_seen_count = len(jobs)
-        jobs = jobs[:quota]
+        jobs = select_jobs_for_vertical_quota(
+            jobs,
+            quota,
+            bucket_quotas,
+        )
         exported_jobs.extend(jobs)
         seen_jobs = update_seen_jobs(
             seen_jobs,
@@ -194,18 +222,30 @@ def main() -> None:
     logger.info("Finished")
 
 
-def keep_mid_senior_jobs(jobs: list[dict]) -> list[dict]:
+def keep_supported_experience_jobs(jobs: list[dict]) -> list[dict]:
     kept_jobs = [
         job
         for job in jobs
-        if str(job.get("seniority_level", "")).strip().lower() in {"mid", "senior"}
+        if str(job.get("experience_bucket", "")).strip().lower()
+        in {"junior", "mid", "senior", "executive"}
     ]
     logging.getLogger(__name__).info(
-        "Kept %s mid/senior jobs and rejected %s unknown-level jobs",
+        "Kept %s jobs with supported experience buckets and rejected %s unsupported jobs",
         len(kept_jobs),
         len(jobs) - len(kept_jobs),
     )
     return kept_jobs
+
+
+def select_jobs_for_vertical_quota(
+    jobs: list[dict],
+    total_quota: int,
+    bucket_quotas: dict[str, int],
+) -> list[dict]:
+    if total_quota <= 0 or not jobs:
+        return []
+    india_jobs = [job for job in jobs if job.get("location_scope") == "India"]
+    return select_jobs_by_experience_bucket(india_jobs, total_quota, bucket_quotas)[:total_quota]
 
 
 def log_run_summary(summary: dict) -> None:

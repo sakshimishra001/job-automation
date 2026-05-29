@@ -35,7 +35,7 @@ def fetch_jobs(config: dict) -> list[dict]:
 def fetch_jobs_for_queries(
     api_config: dict,
     search_config: dict,
-    queries: list[str],
+    queries: list,
 ) -> list[dict]:
     if search_config.get("source", "linkedin") == "linkedin":
         if not queries:
@@ -91,18 +91,18 @@ def fetch_jobs_for_queries(
     return all_jobs
 
 
-def fetch_jobs_from_scrapers(search_config: dict, queries: list[str]) -> list[dict]:
+def fetch_jobs_from_scrapers(search_config: dict, queries: list) -> list[dict]:
     source_names = get_enabled_sources(search_config)
     max_jobs = int(search_config.get("max_jobs_per_source_query", 10))
     headless = bool(search_config.get("headless", True))
-    location = search_config.get("source_location", "India")
     request_delay = float(search_config.get("request_delay_seconds", 1))
 
     all_jobs = []
     total_requests = len(source_names) * len(queries)
     request_number = 0
 
-    for query in queries:
+    for query_input in queries:
+        query, location = parse_query_input(query_input, search_config)
         for source_name in source_names:
             request_number += 1
             scraper = SOURCE_SCRAPERS.get(source_name)
@@ -141,17 +141,63 @@ def get_enabled_sources(search_config: dict) -> list[str]:
     return [str(search_config.get("source", "linkedin")).lower()]
 
 
-def build_vertical_queries(search_config: dict, vertical: str) -> list[str]:
-    role_queries = search_config.get("role_queries", {}).get(vertical, [])
+def build_vertical_queries(search_config: dict, vertical: str) -> list[dict]:
+    role_queries = get_query_variants(search_config, vertical)
     locations = search_config.get("locations", [])
-    max_queries = int(search_config.get("max_queries_per_vertical", len(locations)))
+    max_queries = int(search_config.get("max_queries_per_vertical", len(role_queries)))
+    broad_location = str(search_config.get("source_location", "India"))
+
+    if not role_queries:
+        return []
 
     queries = []
-    for index, location in enumerate(locations):
+    seen = set()
+
+    for index in range(max_queries):
         role_query = role_queries[index % len(role_queries)]
-        queries.append(f"{role_query} {location}")
+        location = locations[index % len(locations)] if locations else broad_location
+        query_text = f"{role_query} {location}".strip()
+        payload = {
+            "query": query_text,
+            "location": broad_location,
+        }
+        key = (payload["query"].lower(), payload["location"].lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        queries.append(payload)
+
+    for role_query in role_queries:
+        broad_query = {
+            "query": role_query,
+            "location": broad_location,
+        }
+        key = (broad_query["query"].lower(), broad_query["location"].lower())
+        if key not in seen and len(queries) < max_queries:
+            seen.add(key)
+            queries.append(broad_query)
 
     return queries[:max_queries]
+
+
+def get_query_variants(search_config: dict, vertical: str) -> list[str]:
+    base_queries = search_config.get("role_queries", {}).get(vertical, [])
+    expanded_queries = search_config.get("query_expansions", {}).get(vertical, [])
+    priority_queries = search_config.get("seniority_priority_queries", {}).get(vertical, [])
+
+    ordered_queries = []
+    seen = set()
+    for query in list(priority_queries) + list(base_queries) + list(expanded_queries):
+        query_text = str(query).strip()
+        if not query_text:
+            continue
+        lowered = query_text.lower()
+        if lowered in seen:
+            continue
+        seen.add(lowered)
+        ordered_queries.append(query_text)
+
+    return ordered_queries
 
 
 def build_all_search_queries(search_config: dict) -> list[str]:
@@ -168,6 +214,16 @@ def build_all_search_queries(search_config: dict) -> list[str]:
                 queries.append(f"{role_query} {location}")
 
     return queries
+
+
+def parse_query_input(query_input, search_config: dict) -> tuple[str, str]:
+    if isinstance(query_input, dict):
+        return (
+            str(query_input.get("query", "")),
+            str(query_input.get("location", search_config.get("source_location", "India"))),
+        )
+
+    return str(query_input), str(search_config.get("source_location", "India"))
 
 
 def make_request_with_retry(

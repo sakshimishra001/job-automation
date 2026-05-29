@@ -5,6 +5,12 @@ import shutil
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from src.job_curator.dedupe import (
+    build_dedupe_keys,
+    build_dedupe_keys_from_seen_record,
+    build_seen_record,
+)
+
 
 logger = logging.getLogger(__name__)
 
@@ -98,6 +104,38 @@ def keep_fresh_jobs(jobs: list[dict], cutoff: datetime | None) -> list[dict]:
     return kept_jobs
 
 
+def keep_fresh_jobs_by_bucket(
+    jobs: list[dict],
+    run_time: datetime,
+    bucket_windows_days: dict[str, int],
+    default_window_days: int,
+) -> list[dict]:
+    if not jobs:
+        return []
+
+    kept_jobs = []
+    skipped_jobs = 0
+
+    for job in jobs:
+        bucket = str(job.get("experience_bucket", "Mid")).strip().title()
+        window_days = int(bucket_windows_days.get(bucket, default_window_days))
+        cutoff = run_time - timedelta(days=window_days)
+        job_time = get_job_freshness_time(job)
+
+        if job_time is None or job_time >= cutoff:
+            kept_jobs.append(job)
+        else:
+            skipped_jobs += 1
+
+    logger.info(
+        "Kept %s fresh jobs and skipped %s stale jobs using bucket windows %s",
+        len(kept_jobs),
+        skipped_jobs,
+        bucket_windows_days,
+    )
+    return kept_jobs
+
+
 def get_job_freshness_time(job: dict) -> datetime | None:
     return parse_datetime(job.get("job_posted_at_datetime_utc")) or parse_datetime(
         job.get("fetched_at")
@@ -123,6 +161,11 @@ def load_seen_jobs(path: Path) -> list[dict]:
                     "apply_link": row.get("apply_link", ""),
                     "title": row.get("title", ""),
                     "company": row.get("company", ""),
+                    "location": row.get("location", ""),
+                    "fingerprint": row.get("fingerprint", ""),
+                    "relaxed_fingerprint": row.get("relaxed_fingerprint", ""),
+                    "canonical_url_key": row.get("canonical_url_key", ""),
+                    "source_job_id": row.get("source_job_id", ""),
                     "fetched_date": row.get("fetched_date", ""),
                 }
                 for row in reader
@@ -153,7 +196,17 @@ def save_seen_jobs(path: Path, seen_jobs: list[dict]) -> None:
     with path.open("w", encoding="utf-8", newline="") as file:
         writer = csv.DictWriter(
             file,
-            fieldnames=["apply_link", "title", "company", "fetched_date"],
+            fieldnames=[
+                "apply_link",
+                "title",
+                "company",
+                "location",
+                "fingerprint",
+                "relaxed_fingerprint",
+                "canonical_url_key",
+                "source_job_id",
+                "fetched_date",
+            ],
         )
         writer.writeheader()
         writer.writerows(seen_jobs)
@@ -170,8 +223,8 @@ def skip_recently_seen_jobs(
     skipped_jobs = 0
 
     for job in jobs:
-        key = build_seen_key_from_job(job)
-        if key and key in recent_keys:
+        keys = build_dedupe_keys(job)
+        if keys and any(key in recent_keys for key in keys):
             skipped_jobs += 1
             continue
 
@@ -189,25 +242,18 @@ def update_seen_jobs(
 ) -> list[dict]:
     retained_jobs = prune_seen_jobs(seen_jobs, retention_days, run_time)
     existing_keys = {
-        build_seen_key_from_seen_job(job)
+        key
         for job in retained_jobs
-        if build_seen_key_from_seen_job(job)
+        for key in build_dedupe_keys_from_seen_record(job)
     }
 
     for job in jobs:
-        key = build_seen_key_from_job(job)
-        if not key or key in existing_keys:
+        keys = build_dedupe_keys(job)
+        if not keys or any(key in existing_keys for key in keys):
             continue
 
-        retained_jobs.append(
-            {
-                "apply_link": clean_text(job.get("job_apply_link", "")),
-                "title": clean_text(job.get("job_title", "")),
-                "company": clean_text(job.get("employer_name", "")),
-                "fetched_date": format_datetime(run_time),
-            }
-        )
-        existing_keys.add(key)
+        retained_jobs.append(build_seen_record(job, format_datetime(run_time)))
+        existing_keys.update(keys)
 
     return retained_jobs
 
@@ -235,36 +281,10 @@ def build_recent_seen_keys(
 ) -> set[str]:
     recent_jobs = prune_seen_jobs(seen_jobs, retention_days, run_time)
     return {
-        build_seen_key_from_seen_job(job)
+        key
         for job in recent_jobs
-        if build_seen_key_from_seen_job(job)
+        for key in build_dedupe_keys_from_seen_record(job)
     }
-
-
-def build_seen_key_from_job(job: dict) -> str:
-    apply_link = clean_text(job.get("job_apply_link", ""))
-    if apply_link:
-        return apply_link
-
-    return "|".join(
-        [
-            clean_text(job.get("job_title", "")),
-            clean_text(job.get("employer_name", "")),
-        ]
-    )
-
-
-def build_seen_key_from_seen_job(job: dict) -> str:
-    apply_link = clean_text(job.get("apply_link", ""))
-    if apply_link:
-        return apply_link
-
-    return "|".join(
-        [
-            clean_text(job.get("title", "")),
-            clean_text(job.get("company", "")),
-        ]
-    )
 
 
 def parse_datetime(value: object) -> datetime | None:
@@ -290,9 +310,3 @@ def parse_datetime(value: object) -> datetime | None:
 
 def format_datetime(value: datetime) -> str:
     return value.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
-
-
-def clean_text(value: object) -> str:
-    if value is None:
-        return ""
-    return str(value).strip().lower()

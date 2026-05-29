@@ -13,19 +13,67 @@ search:
   country: "in"
   pages: 1
   request_delay_seconds: 5
-  max_queries_per_vertical: 3
-  max_jobs_per_source_query: 15
+  max_queries_per_vertical: 8
+  max_jobs_per_source_query: 20
   quota_per_vertical: 15
   minimum_jobs_per_vertical: 8
+  seniority_priority_queries:
+    Product Management:
+      - "VP Product"
+      - "Head of Product"
+      - "Director Product Management"
+      - "Chief Product Officer"
+    Project Management:
+      - "Program Director"
+      - "Head of PMO"
+      - "Director Project Management"
+      - "Transformation Director"
+    CXO / Executive Leadership:
+      - "Chief Executive Officer"
+      - "Chief Operating Officer"
+      - "Chief Technology Officer"
+      - "Vice President"
+    AI / ML:
+      - "Head of AI"
+      - "Director Machine Learning"
+      - "VP AI"
+      - "Chief AI Officer"
+    Data Science:
+      - "Director Data Science"
+      - "Head of Analytics"
+      - "VP Data Science"
+      - "Chief Data Officer"
+    Finance:
+      - "Chief Financial Officer"
+      - "VP Finance"
+      - "Finance Director"
+      - "Head of FP&A"
+    HR:
+      - "Chief Human Resources Officer"
+      - "VP Human Resources"
+      - "HR Director"
+      - "Head of Talent"
+    Cybersecurity:
+      - "Chief Information Security Officer"
+      - "VP Cybersecurity"
+      - "Director Information Security"
+      - "Head of Security"
+    Senior Management & Strategy Leadership:
+      - "VP Strategy"
+      - "Head of Strategy"
+      - "Strategy Director"
+      - "Corporate Strategy Lead"
   role_queries:
     Product Management:
       - "Senior Product Manager"
       - "Lead Product Manager"
       - "Director Product Management"
+      - "Group Product Manager"
     Project Management:
       - "Senior Project Manager"
       - "Program Manager"
       - "Delivery Manager"
+      - "PMO Manager"
     CXO / Executive Leadership:
       - "Chief Executive Officer"
       - "Chief Operating Officer"
@@ -58,6 +106,52 @@ search:
       - "Business Head"
       - "General Manager"
       - "Chief of Staff"
+  query_expansions:
+    Product Management:
+      - "VP Product"
+      - "Head of Product"
+      - "Product Strategy"
+      - "Chief Product Officer"
+    Project Management:
+      - "Program Director"
+      - "Transformation Manager"
+      - "Director PMO"
+      - "Portfolio Manager"
+    CXO / Executive Leadership:
+      - "Chief Financial Officer"
+      - "Chief AI Officer"
+      - "Executive Leadership"
+      - "Managing Director"
+    AI / ML:
+      - "Head of AI"
+      - "Director AI"
+      - "Machine Learning Director"
+      - "AI Strategy"
+    Data Science:
+      - "Head of Data Science"
+      - "Director Analytics"
+      - "Decision Science Lead"
+      - "Chief Data Officer"
+    Finance:
+      - "Finance Director"
+      - "Controller"
+      - "Treasury Manager"
+      - "FinTech Strategy"
+    HR:
+      - "HR Director"
+      - "People Operations Lead"
+      - "Talent Director"
+      - "CHRO"
+    Cybersecurity:
+      - "CISO"
+      - "Cyber Security Director"
+      - "Application Security Manager"
+      - "Cloud Security Lead"
+    Senior Management & Strategy Leadership:
+      - "Strategy Director"
+      - "Head of Strategy"
+      - "Corporate Strategy"
+      - "Business Transformation"
   locations:
     - "Bangalore"
     - "Mumbai"
@@ -66,6 +160,14 @@ search:
     - "Gurgaon"
     - "Chennai"
     - "Noida"
+    - "Ahmedabad"
+    - "Jaipur"
+    - "Indore"
+    - "Coimbatore"
+    - "Kochi"
+    - "Bhubaneswar"
+    - "Lucknow"
+    - "Visakhapatnam"
 
 output:
   raw_dir: "data/raw"
@@ -82,3 +184,16 @@ operational:
 email:
   enabled: true
   subject: "Job Listings - Weekly Summary"
+
+curation:
+  vertical_validation_min_score: 1
+  freshness_window_days_by_bucket:
+    Junior: 3
+    Mid: 7
+    Senior: 14
+    Executive: 30
+  experience_bucket_quotas:
+    Junior: 2
+    Mid: 4
+    Senior: 5
+    Executive: 4

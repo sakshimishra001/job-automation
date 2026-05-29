@@ -3,12 +3,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-TRUSTED_PUBLISHERS = [
-    "linkedin",
-    "indeed",
-    "glassdoor",
-    "naukri",
-]
+TRUSTED_PUBLISHERS = ["linkedin", "indeed", "glassdoor", "naukri"]
 
 INDIA_LOCATION_WORDS = [
     "india",
@@ -21,6 +16,29 @@ INDIA_LOCATION_WORDS = [
     "gurugram",
     "chennai",
     "noida",
+    "karnataka",
+    "tamil nadu",
+    "maharashtra",
+    "telangana",
+    "delhi",
+    "new delhi",
+    "ncr",
+    "uttar pradesh",
+    "haryana",
+    "ahmedabad",
+    "jaipur",
+    "indore",
+    "coimbatore",
+    "kochi",
+    "bhubaneswar",
+    "lucknow",
+    "visakhapatnam",
+    "nagpur",
+    "surat",
+    "vadodara",
+    "thiruvananthapuram",
+    "mysuru",
+    "mohali",
 ]
 
 
@@ -50,8 +68,43 @@ def keep_approved_publishers(jobs: list[dict]) -> list[dict]:
     return kept_jobs
 
 
+def annotate_location_scope_for_jobs(jobs: list[dict]) -> list[dict]:
+    for job in jobs:
+        if is_india_job(job):
+            job["location_scope"] = "India"
+        else:
+            job["location_scope"] = "Rejected"
+
+    return jobs
+
+
+def keep_supported_location_scope_jobs(jobs: list[dict]) -> list[dict]:
+    kept_jobs = [job for job in jobs if job.get("location_scope") == "India"]
+    logger.info("Kept %s India jobs after location scope filtering", len(kept_jobs))
+    logger.info("Rejected %s location-mismatched jobs", len(jobs) - len(kept_jobs))
+    return kept_jobs
+
+
 def is_india_job(job: dict) -> bool:
-    location_text = " ".join(
+    country = clean_text(job.get("job_country", ""))
+    if country in {"in", "india"}:
+        return True
+
+    location_text = build_location_text(job)
+    context_text = clean_text(job.get("search_location_context", ""))
+    searchable_text = " ".join(
+        [
+            location_text,
+            context_text,
+            clean_text(job.get("job_search_text", "")),
+            clean_text(job.get("job_description", "")),
+        ]
+    )
+    return contains_any(searchable_text, INDIA_LOCATION_WORDS)
+
+
+def build_location_text(job: dict) -> str:
+    return " ".join(
         [
             clean_text(job.get("job_city", "")),
             clean_text(job.get("job_state", "")),
@@ -59,8 +112,6 @@ def is_india_job(job: dict) -> bool:
             clean_text(job.get("job_location", "")),
         ]
     )
-
-    return contains_any(location_text, INDIA_LOCATION_WORDS)
 
 
 def is_approved_publisher(job: dict) -> bool:

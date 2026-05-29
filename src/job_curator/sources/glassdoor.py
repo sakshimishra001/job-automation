@@ -2,8 +2,11 @@ import logging
 from urllib.parse import quote_plus
 
 from src.job_curator.sources.common import (
+    card_text,
+    extract_company_apply_url,
     first_attribute,
     first_text,
+    infer_country_from_location,
     normalize_url,
     parse_posted_date,
     utc_timestamp,
@@ -49,7 +52,7 @@ def scrape_glassdoor_jobs(
 
             cards = page.locator("li[data-test='jobListing'], [data-test='jobListing']")
             for index in range(min(cards.count(), max_jobs)):
-                job = parse_job_card(cards.nth(index))
+                job = parse_job_card(cards.nth(index), location)
                 if job:
                     jobs.append(job)
 
@@ -70,11 +73,13 @@ def build_search_url(query: str, location: str) -> str:
     )
 
 
-def parse_job_card(card) -> dict | None:
+def parse_job_card(card, search_location_context: str) -> dict | None:
+    search_text = card_text(card)
     title = first_text(card, ["[data-test='job-title']", "a[href*='job-listing']"])
     employer = first_text(card, ["[data-test='employer-name']", ".EmployerProfile_compactEmployerName__9MGcV"])
     location = first_text(card, ["[data-test='job-location']"])
     apply_link = first_attribute(card, "a[href*='job-listing']", "href")
+    normalized_apply_link = normalize_url(apply_link, GLASSDOOR_BASE_URL)
     posted_date = parse_posted_date(first_text(card, ["[data-test='job-age']"]))
 
     if not title or not apply_link:
@@ -85,12 +90,18 @@ def parse_job_card(card) -> dict | None:
         "employer_name": employer,
         "job_city": location or "India",
         "job_state": "",
-        "job_country": "IN",
+        "job_country": infer_country_from_location(location or search_location_context),
         "job_location": location or "India",
         "job_employment_type": "",
         "job_posted_at_datetime_utc": posted_date,
-        "job_apply_link": normalize_url(apply_link, GLASSDOOR_BASE_URL),
+        "job_apply_link": normalized_apply_link,
+        "company_apply_url": extract_company_apply_url(
+            normalized_apply_link,
+            ["glassdoor.com", "glassdoor.co.in", "www.glassdoor.co.in"],
+        ),
         "job_publisher": "Glassdoor",
         "job_description": "",
+        "job_search_text": search_text,
+        "search_location_context": search_location_context,
         "fetched_at": utc_timestamp(),
     }

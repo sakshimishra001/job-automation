@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: job-automation
+  cancel-in-progress: false
+
 jobs:
   run-job-curator:
     runs-on: ubuntu-latest

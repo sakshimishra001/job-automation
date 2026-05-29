@@ -12,6 +12,8 @@ CSV_COLUMNS = [
     "city",
     "employment_type",
     "seniority_level",
+    "experience_bucket",
+    "location_scope",
     "vertical",
     "posted_date",
     "apply_link",
@@ -37,9 +39,11 @@ def export_jobs_to_csv(jobs: list[dict], output_dir: Path) -> Path:
                     "city": job.get("job_city", ""),
                     "employment_type": job.get("job_employment_type", ""),
                     "seniority_level": job.get("seniority_level", ""),
+                    "experience_bucket": job.get("experience_bucket", ""),
+                    "location_scope": job.get("location_scope", ""),
                     "vertical": job.get("vertical", ""),
                     "posted_date": job.get("job_posted_at_datetime_utc", ""),
-                    "apply_link": job.get("job_apply_link", ""),
+                    "apply_link": preferred_apply_link(job),
                     "publisher": job.get("job_publisher", ""),
                 }
             )
@@ -83,9 +87,11 @@ def write_jobs_csv(jobs: list[dict], output_path: Path) -> None:
                     "city": job.get("job_city", ""),
                     "employment_type": job.get("job_employment_type", ""),
                     "seniority_level": job.get("seniority_level", ""),
+                    "experience_bucket": job.get("experience_bucket", ""),
+                    "location_scope": job.get("location_scope", ""),
                     "vertical": job.get("vertical", ""),
                     "posted_date": job.get("job_posted_at_datetime_utc", ""),
-                    "apply_link": job.get("job_apply_link", ""),
+                    "apply_link": preferred_apply_link(job),
                     "publisher": job.get("job_publisher", ""),
                 }
             )
@@ -105,3 +111,7 @@ def slugify(value: str) -> str:
 def build_fallback_output_path(output_dir: Path, vertical: str) -> Path:
     file_timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     return output_dir / f"{slugify(vertical)}_{file_timestamp}.csv"
+
+
+def preferred_apply_link(job: dict) -> str:
+    return job.get("company_apply_url") or job.get("job_apply_link", "")
