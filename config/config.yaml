@@ -58,11 +58,18 @@ search:
       - "VP Cybersecurity"
       - "Director Information Security"
       - "Head of Security"
-    Senior Management & Strategy Leadership:
+    Senior Management:
+      - "Vice President"
+      - "Senior Director"
+      - "Associate Director"
+      - "Business Unit Head"
+      - "Functional Head"
+    Strategy Leadership:
       - "VP Strategy"
       - "Head of Strategy"
-      - "Strategy Director"
+      - "Director Strategy"
       - "Corporate Strategy Lead"
+      - "Chief of Staff"
   role_queries:
     Product Management:
       - "Senior Product Manager"
@@ -101,10 +108,19 @@ search:
       - "Cybersecurity Manager"
       - "Information Security Manager"
       - "Security Risk Manager"
-    Senior Management & Strategy Leadership:
-      - "Strategy Manager"
-      - "Business Head"
+    Senior Management:
+      - "Senior Manager"
       - "General Manager"
+      - "Deputy General Manager"
+      - "Associate Director"
+      - "Director"
+      - "Regional Manager"
+    Strategy Leadership:
+      - "Strategy Manager"
+      - "Business Strategy Manager"
+      - "Corporate Strategy Manager"
+      - "Strategic Planning Manager"
+      - "Transformation Lead"
       - "Chief of Staff"
   query_expansions:
     Product Management:
@@ -147,11 +163,24 @@ search:
       - "Cyber Security Director"
       - "Application Security Manager"
       - "Cloud Security Lead"
-    Senior Management & Strategy Leadership:
-      - "Strategy Director"
-      - "Head of Strategy"
-      - "Corporate Strategy"
-      - "Business Transformation"
+    Senior Management:
+      - "AVP"
+      - "Program Director"
+      - "Delivery Director"
+      - "Head of Product"
+      - "Head of Engineering"
+      - "Head of Marketing"
+      - "Head of Finance"
+      - "Head of HR"
+    Strategy Leadership:
+      - "Senior Strategy Manager"
+      - "Strategy Lead"
+      - "Strategic Initiatives Lead"
+      - "Business Transformation Lead"
+      - "Growth Strategy Manager"
+      - "Corporate Development Manager"
+      - "Corporate Development Lead"
+      - "VP Strategy"
   locations:
     - "Bangalore"
     - "Mumbai"

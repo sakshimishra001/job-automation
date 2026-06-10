@@ -77,6 +77,16 @@ ONSITE_KEYWORDS = [
     "in office",
 ]
 
+STRATEGY_TITLE_KEYWORDS = [
+    "strategy",
+    "strategic",
+    "transformation",
+    "planning",
+    "growth",
+    "corporate development",
+    "chief of staff",
+]
+
 VERTICAL_KEYWORDS = {
     "Product Management": [
         "product manager",
@@ -160,20 +170,50 @@ VERTICAL_KEYWORDS = {
         "application security",
         "cloud security",
     ],
-    "Senior Management & Strategy Leadership": [
-        "strategy manager",
-        "business head",
+    "Senior Management": [
+        "senior manager",
+        "lead manager",
         "general manager",
-        "chief of staff",
-        "business strategy",
-        "growth strategy",
-        "strategic planning",
+        "deputy general manager",
+        "associate director",
+        "director",
+        "senior director",
+        "avp",
+        "vice president",
+        "vp ",
+        "functional head",
+        "department head",
+        "business unit head",
         "operations head",
-        "corporate strategy",
-        "strategy director",
+        "program director",
+        "delivery director",
+        "regional manager",
+        "country manager",
+        "head of product",
+        "head of engineering",
+        "head of marketing",
+        "head of finance",
+        "head of hr",
+        "head of operations",
+    ],
+    "Strategy Leadership": [
+        "strategy manager",
+        "senior strategy manager",
+        "strategy lead",
+        "business strategy manager",
+        "corporate strategy manager",
+        "corporate strategy lead",
+        "strategic planning manager",
+        "strategic initiatives lead",
+        "transformation lead",
+        "business transformation lead",
+        "growth strategy manager",
+        "chief of staff",
+        "director strategy",
         "head of strategy",
-        "business transformation",
         "vp strategy",
+        "corporate development manager",
+        "corporate development lead",
     ],
 }
 
@@ -211,7 +251,15 @@ def validate_jobs_for_vertical(
     kept_jobs = []
 
     for job in jobs:
+        title_text = clean_text(job.get("job_title", ""))
         searchable_text = build_searchable_text(job)
+
+        if vertical == "Strategy Leadership" and not has_strategy_title_signal(title_text):
+            continue
+
+        if vertical == "Senior Management" and has_strategy_title_signal(title_text):
+            continue
+
         best_vertical, best_score = classify_vertical_with_score(searchable_text)
         target_score = get_vertical_score(searchable_text, vertical)
         tie_verticals = [
@@ -295,6 +343,10 @@ def classify_workplace_type(job: dict) -> str:
         return "Onsite"
 
     return ""
+
+
+def has_strategy_title_signal(title: str) -> bool:
+    return contains_keyword(title, STRATEGY_TITLE_KEYWORDS)
 
 
 def classify_vertical(text: str) -> str:
