@@ -106,6 +106,7 @@ def main() -> None:
     exported_jobs = []
     failed_verticals = []
     vertical_summaries = []
+    export_files = []
 
     for vertical in verticals:
         logger.info("Starting vertical: %s", vertical)
@@ -179,6 +180,7 @@ def main() -> None:
             )
 
         output_path = export_vertical_jobs_to_csv(jobs, output_dir, vertical)
+        export_files.append(str(output_path))
         logger.info("Saved %s %s jobs to %s", len(jobs), vertical, output_path)
         logger.info(
             "Summary for %s: fetched=%s fresh=%s stale_skipped=%s seen_skipped=%s exported=%s",
@@ -215,6 +217,9 @@ def main() -> None:
         "total_exported": len(exported_jobs),
         "failed_verticals": failed_verticals,
         "verticals": vertical_summaries,
+        "exported_jobs_today": exported_jobs,
+        "export_files": export_files,
+        "run_state_path": str(run_state_path),
     }
     log_run_summary(summary)
     send_run_summary_email(summary, config.get("email", {}))
