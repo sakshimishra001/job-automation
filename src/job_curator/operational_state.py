@@ -56,7 +56,8 @@ def load_run_state(path: Path) -> dict:
 
 def save_run_state(path: Path, run_time: datetime) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    state = {"last_successful_run": format_datetime(run_time)}
+    state = load_run_state(path)
+    state["last_successful_run"] = format_datetime(run_time)
 
     with path.open("w", encoding="utf-8") as file:
         json.dump(state, file, indent=2)
