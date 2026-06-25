@@ -91,10 +91,8 @@ VERTICAL_KEYWORDS = {
     "Product Management": [
         "product manager",
         "product management",
-        "product owner",
         "product lead",
         "product strategy",
-        "product operations",
         "group product manager",
         "head of product",
         "vp product",
