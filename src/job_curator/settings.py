@@ -38,6 +38,7 @@ def apply_runtime_overrides(config: dict) -> None:
     output_config = config.setdefault("output", {})
     operational_config = config.setdefault("operational", {})
     email_config = config.setdefault("email", {})
+    dashboard_upload_config = config.setdefault("dashboard_upload", {})
 
     apply_env_override(output_config, "raw_dir", "JOB_CURATOR_OUTPUT_DIR")
     apply_env_override(operational_config, "state_dir", "JOB_CURATOR_STATE_DIR")
@@ -66,6 +67,22 @@ def apply_runtime_overrides(config: dict) -> None:
         "enabled",
         "JOB_CURATOR_EMAIL_ENABLED",
         cast=parse_bool,
+    )
+    apply_env_override(
+        dashboard_upload_config,
+        "enabled",
+        "DASHBOARD_UPLOAD_ENABLED",
+        cast=parse_bool,
+    )
+    apply_env_override(dashboard_upload_config, "api_url", "DASHBOARD_API_URL")
+    apply_env_override(dashboard_upload_config, "auth_token", "DASHBOARD_AUTH_TOKEN")
+    apply_env_override(dashboard_upload_config, "guid", "DASHBOARD_GUID")
+    apply_env_override(dashboard_upload_config, "x_auth_key", "DASHBOARD_X_AUTH_KEY")
+    apply_env_override(
+        dashboard_upload_config,
+        "max_jobs_per_vertical",
+        "DASHBOARD_MAX_JOBS_PER_VERTICAL",
+        cast=int,
     )
 
 

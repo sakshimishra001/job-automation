@@ -7,6 +7,7 @@ from src.job_curator.classify import (
     set_vertical_for_jobs,
     validate_jobs_for_vertical,
 )
+from src.job_curator.dashboard_upload import upload_dashboard_jobs
 from src.job_curator.dedupe import deduplicate_jobs
 from src.job_curator.email_summary import send_run_summary_email
 from src.job_curator.export_csv import export_vertical_jobs_to_csv
@@ -77,6 +78,7 @@ def main() -> None:
     recent_job_window_days = int(operational_config.get("recent_job_window_days", 7))
     seen_retention_days = int(operational_config.get("seen_retention_days", 14))
     curation_config = config.get("curation", {})
+    dashboard_upload_config = config.get("dashboard_upload", {})
     bucket_quotas = curation_config.get(
         "experience_bucket_quotas",
         {"Junior": 2, "Mid": 4, "Senior": 5, "Executive": 4},
@@ -182,6 +184,7 @@ def main() -> None:
         output_path = export_vertical_jobs_to_csv(jobs, output_dir, vertical)
         export_files.append(str(output_path))
         logger.info("Saved %s %s jobs to %s", len(jobs), vertical, output_path)
+        upload_dashboard_jobs(jobs, vertical, dashboard_upload_config)
         logger.info(
             "Summary for %s: fetched=%s fresh=%s stale_skipped=%s seen_skipped=%s exported=%s",
             vertical,

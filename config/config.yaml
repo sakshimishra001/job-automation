@@ -214,6 +214,22 @@ email:
   enabled: true
   subject: "Job Listings - Weekly Summary"
 
+dashboard_upload:
+  enabled: false
+  api_url: "https://internal-dash.accredian.com/api/v1/jobs/insert-job"
+  auth_token: ""
+  guid: ""
+  x_auth_key: ""
+  max_jobs_per_vertical: 1
+  timeout_seconds: 30
+  category_map:
+    Product Management: "PM"
+    Project Management: "PMT"
+    Data Science: "DS"
+    Finance: "FT"
+    HR: "HR"
+    Cybersecurity: "CS"
+
 curation:
   vertical_validation_min_score: 1
   freshness_window_days_by_bucket:

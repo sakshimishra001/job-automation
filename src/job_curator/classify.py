@@ -106,6 +106,7 @@ VERTICAL_KEYWORDS = {
         "chief product officer",
         "cpo",
         "product strategy",
+        "product operations",
         "product portfolio",
         "product roadmap",
         "product lifecycle",
@@ -586,7 +587,7 @@ def score_verticals(text: str) -> dict[str, int]:
 def get_vertical_score(text: str, vertical: str) -> int:
     clean = clean_text(text)
     keywords = VERTICAL_KEYWORDS.get(vertical, [])
-    return sum(1 for keyword in keywords if keyword in clean)
+    return sum(1 for keyword in keywords if keyword_matches(clean, keyword))
 
 
 def select_jobs_by_experience_bucket(
@@ -728,7 +729,24 @@ def build_searchable_text(job: dict) -> str:
 
 def contains_keyword(text: str, keywords: list[str]) -> bool:
     clean = clean_text(text)
-    return any(keyword in clean for keyword in keywords)
+    return any(keyword_matches(clean, keyword) for keyword in keywords)
+
+
+def keyword_matches(text: str, keyword: str) -> bool:
+    clean = clean_text(text)
+    clean_keyword = clean_text(keyword)
+    if not clean or not clean_keyword:
+        return False
+
+    if should_match_as_whole_word(clean_keyword):
+        pattern = rf"(?<![a-z0-9]){re.escape(clean_keyword)}(?![a-z0-9])"
+        return re.search(pattern, clean) is not None
+
+    return clean_keyword in clean
+
+
+def should_match_as_whole_word(keyword: str) -> bool:
+    return " " not in keyword and len(keyword) <= 4
 
 
 def clean_text(value: object) -> str:

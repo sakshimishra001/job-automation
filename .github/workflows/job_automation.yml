@@ -46,6 +46,12 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          DASHBOARD_UPLOAD_ENABLED: ${{ secrets.DASHBOARD_UPLOAD_ENABLED }}
+          DASHBOARD_API_URL: ${{ secrets.DASHBOARD_API_URL }}
+          DASHBOARD_AUTH_TOKEN: ${{ secrets.DASHBOARD_AUTH_TOKEN }}
+          DASHBOARD_GUID: ${{ secrets.DASHBOARD_GUID }}
+          DASHBOARD_X_AUTH_KEY: ${{ secrets.DASHBOARD_X_AUTH_KEY }}
+          DASHBOARD_MAX_JOBS_PER_VERTICAL: ${{ secrets.DASHBOARD_MAX_JOBS_PER_VERTICAL }}
         run: |
           python -m src.job_curator.main
 
