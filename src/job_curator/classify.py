@@ -80,6 +80,9 @@ ONSITE_KEYWORDS = [
 STRATEGY_TITLE_KEYWORDS = [
     "strategy",
     "strategic",
+    "business strategy",
+    "corporate strategy",
+    "strategic initiatives",
     "transformation",
     "planning",
     "growth",
@@ -381,11 +384,53 @@ VERTICAL_KEYWORDS = {
         "data security",
         "security audit",
     ],
+    "Digital Transformation": [
+        "digital transformation",
+        "digital transformation manager",
+        "digital transformation lead",
+        "business transformation",
+        "business transformation manager",
+        "technology transformation",
+        "technology transformation lead",
+        "enterprise transformation",
+        "process transformation",
+        "automation transformation",
+        "digital strategy",
+        "digital strategy manager",
+        "digital innovation",
+        "digital adoption",
+        "digital change",
+        "digital change manager",
+        "digital program",
+        "digital program manager",
+        "digital operations",
+        "transformation consultant",
+        "transformation manager",
+        "transformation lead",
+    ],
+    "General Management": [
+        "general manager",
+        "deputy general manager",
+        "business manager",
+        "business head",
+        "business unit manager",
+        "business operations",
+        "business operations manager",
+        "operations manager",
+        "regional manager",
+        "area manager",
+        "branch manager",
+        "city manager",
+        "p&l",
+        "profit and loss",
+        "growth manager",
+        "category manager",
+        "commercial manager",
+        "revenue manager",
+    ],
     "Senior Management": [
         "senior manager",
         "lead manager",
-        "general manager",
-        "deputy general manager",
         "associate director",
         "director",
         "senior director",
@@ -398,8 +443,6 @@ VERTICAL_KEYWORDS = {
         "operations head",
         "program director",
         "delivery director",
-        "regional manager",
-        "country manager",
         "head of product",
         "head of engineering",
         "head of marketing",
@@ -408,6 +451,10 @@ VERTICAL_KEYWORDS = {
         "head of operations",
     ],
     "Strategy Leadership": [
+        "strategy",
+        "strategic",
+        "corporate strategy",
+        "business strategy",
         "strategy manager",
         "senior strategy manager",
         "strategy lead",
@@ -415,16 +462,21 @@ VERTICAL_KEYWORDS = {
         "corporate strategy manager",
         "corporate strategy lead",
         "strategic planning manager",
+        "strategic planning",
         "strategic initiatives lead",
+        "strategic initiatives",
         "transformation lead",
         "business transformation lead",
+        "business transformation",
         "growth strategy manager",
+        "growth strategy",
         "chief of staff",
         "director strategy",
         "head of strategy",
         "vp strategy",
         "corporate development manager",
         "corporate development lead",
+        "corporate development",
     ],
 }
 
@@ -478,16 +530,42 @@ def validate_jobs_for_vertical(
             if score == best_score and score > 0
         ]
 
-        if (
-            target_score >= min_score
-            and best_vertical == vertical
-            and best_score > 0
-            and len(tie_verticals) <= 2
+        if is_valid_vertical_match(
+            vertical,
+            best_vertical,
+            best_score,
+            target_score,
+            tie_verticals,
+            title_text,
+            min_score,
         ):
             job["vertical_match_score"] = target_score
             kept_jobs.append(job)
 
     return kept_jobs
+
+
+def is_valid_vertical_match(
+    vertical: str,
+    best_vertical: str,
+    best_score: int,
+    target_score: int,
+    tie_verticals: list[str],
+    title_text: str,
+    min_score: int,
+) -> bool:
+    if (
+        target_score >= min_score
+        and best_vertical == vertical
+        and best_score > 0
+        and len(tie_verticals) <= 2
+    ):
+        return True
+
+    if vertical == "Strategy Leadership" and has_strategy_title_signal(title_text):
+        return target_score >= min_score and target_score >= max(best_score - 1, min_score)
+
+    return False
 
 
 def classify_seniority(title: str) -> str:

@@ -6,9 +6,6 @@ search:
   sources:
     enabled:
       - "linkedin"
-      - "naukri"
-      - "indeed"
-      - "glassdoor"
   source_location: "India"
   country: "in"
   pages: 1
@@ -58,17 +55,30 @@ search:
       - "VP Cybersecurity"
       - "Director Information Security"
       - "Head of Security"
+    Digital Transformation:
+      - "Digital Transformation"
+      - "Business Transformation"
+      - "Technology Transformation"
+      - "Digital Strategy"
     Senior Management:
       - "Vice President"
       - "Senior Director"
       - "Associate Director"
       - "Business Unit Head"
       - "Functional Head"
+    General Management:
+      - "General Manager"
+      - "Business Manager"
+      - "Business Head"
+      - "Business Operations"
     Strategy Leadership:
-      - "VP Strategy"
-      - "Head of Strategy"
-      - "Director Strategy"
-      - "Corporate Strategy Lead"
+      - "Corporate Strategy"
+      - "Business Strategy"
+      - "Strategy Manager"
+      - "Strategic Initiatives"
+      - "Business Transformation"
+      - "Growth Strategy"
+      - "Corporate Development"
       - "Chief of Staff"
   role_queries:
     Product Management:
@@ -108,6 +118,13 @@ search:
       - "Cybersecurity Manager"
       - "Information Security Manager"
       - "Security Risk Manager"
+    Digital Transformation:
+      - "Digital Transformation Manager"
+      - "Business Transformation Manager"
+      - "Digital Strategy Manager"
+      - "Technology Transformation Lead"
+      - "Digital Program Manager"
+      - "Digital Change Manager"
     Senior Management:
       - "Senior Manager"
       - "General Manager"
@@ -115,11 +132,21 @@ search:
       - "Associate Director"
       - "Director"
       - "Regional Manager"
+    General Management:
+      - "General Manager"
+      - "Business Manager"
+      - "Business Operations Manager"
+      - "Operations Manager"
+      - "Regional Manager"
+      - "Branch Manager"
     Strategy Leadership:
       - "Strategy Manager"
+      - "Corporate Strategy"
+      - "Business Strategy"
       - "Business Strategy Manager"
       - "Corporate Strategy Manager"
       - "Strategic Planning Manager"
+      - "Strategic Initiatives"
       - "Transformation Lead"
       - "Chief of Staff"
   query_expansions:
@@ -163,6 +190,13 @@ search:
       - "Cyber Security Director"
       - "Application Security Manager"
       - "Cloud Security Lead"
+    Digital Transformation:
+      - "Enterprise Transformation"
+      - "Process Transformation"
+      - "Digital Innovation"
+      - "Digital Adoption"
+      - "Automation Transformation"
+      - "Transformation Consultant"
     Senior Management:
       - "AVP"
       - "Program Director"
@@ -172,7 +206,18 @@ search:
       - "Head of Marketing"
       - "Head of Finance"
       - "Head of HR"
+    General Management:
+      - "Business Unit Manager"
+      - "Area Manager"
+      - "City Manager"
+      - "P&L Manager"
+      - "Category Manager"
+      - "Commercial Manager"
+      - "Revenue Manager"
     Strategy Leadership:
+      - "Director Strategy"
+      - "Head of Strategy"
+      - "VP Strategy"
       - "Senior Strategy Manager"
       - "Strategy Lead"
       - "Strategic Initiatives Lead"
@@ -180,7 +225,6 @@ search:
       - "Growth Strategy Manager"
       - "Corporate Development Manager"
       - "Corporate Development Lead"
-      - "VP Strategy"
   locations:
     - "Bangalore"
     - "Mumbai"
