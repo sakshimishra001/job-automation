@@ -4,6 +4,7 @@ import time
 import requests
 from requests import HTTPError, RequestException
 
+from src.job_curator.sources.cutshort import scrape_cutshort_jobs
 from src.job_curator.sources.glassdoor import scrape_glassdoor_jobs
 from src.job_curator.sources.indeed import scrape_indeed_jobs
 from src.job_curator.sources.linkedin import scrape_linkedin_jobs
@@ -14,6 +15,7 @@ logger = logging.getLogger(__name__)
 
 SOURCE_SCRAPERS = {
     "linkedin": scrape_linkedin_jobs,
+    "cutshort": scrape_cutshort_jobs,
     "naukri": scrape_naukri_jobs,
     "indeed": scrape_indeed_jobs,
     "glassdoor": scrape_glassdoor_jobs,

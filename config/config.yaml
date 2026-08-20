@@ -6,6 +6,7 @@ search:
   sources:
     enabled:
       - "linkedin"
+      - "cutshort"
   source_location: "India"
   country: "in"
   pages: 1
@@ -273,6 +274,12 @@ dashboard_upload:
     Finance: "FT"
     HR: "HR"
     Cybersecurity: "CS"
+    CXO / Executive Leadership: "CXO"
+    AI / ML: "AI/ML"
+    Digital Transformation: "DT"
+    General Management: "GM"
+    Senior Management: "SM"
+    Strategy Leadership: "SL"
 
 curation:
   vertical_validation_min_score: 1

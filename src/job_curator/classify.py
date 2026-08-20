@@ -480,6 +480,279 @@ VERTICAL_KEYWORDS = {
     ],
 }
 
+VERTICAL_NEGATIVE_KEYWORDS = {
+    "Product Management": [
+        "production manager",
+        "product designer",
+        "graphic designer",
+        "merchandiser",
+        "catalog manager",
+    ],
+    "Project Management": [
+        "site supervisor",
+        "site engineer",
+        "civil engineer",
+        "construction site",
+        "interior project",
+        "mep project",
+    ],
+    "CXO / Executive Leadership": [
+        "front office executive",
+        "back office executive",
+        "customer care executive",
+        "telecaller",
+        "sales executive",
+        "executive assistant",
+        "admin executive",
+    ],
+    "AI / ML": [
+        "photoshop",
+        "illustrator",
+        "video editor",
+        "graphic designer",
+        "ai trainer",
+        "data entry",
+    ],
+    "Data Science": [
+        "data entry",
+        "data operator",
+        "clinical data coordinator",
+        "mis executive",
+        "excel executive",
+        "typing",
+    ],
+    "Finance": [
+        "cashier",
+        "billing executive",
+        "collection executive",
+        "loan sales",
+        "insurance sales",
+        "telesales",
+    ],
+    "HR": [
+        "admin executive",
+        "office administrator",
+        "payroll clerk",
+        "attendance executive",
+        "front office",
+        "receptionist",
+    ],
+    "Cybersecurity": [
+        "physical security",
+        "cctv",
+        "surveillance",
+        "security guard",
+        "facility security",
+        "premises security",
+        "fire safety",
+        "housekeeping",
+        "mall security",
+        "site security officer",
+        "loss prevention",
+        "industrial security",
+        "bouncer",
+    ],
+    "Digital Transformation": [
+        "digital marketing",
+        "social media",
+        "seo",
+        "graphic designer",
+        "content creator",
+        "digital sales",
+    ],
+    "General Management": [
+        "store manager",
+        "restaurant manager",
+        "hotel manager",
+        "facility manager",
+        "warehouse manager",
+        "retail store",
+        "sales officer",
+    ],
+    "Senior Management": [
+        "store manager",
+        "restaurant manager",
+        "hotel manager",
+        "facility manager",
+        "site supervisor",
+        "front office manager",
+    ],
+    "Strategy Leadership": [
+        "digital marketing strategy",
+        "social media strategy",
+        "brand strategy",
+        "content strategy",
+        "creative strategy",
+        "seo strategy",
+    ],
+}
+
+VERTICAL_STRONG_KEYWORDS = {
+    "Data Science": [
+        "data scientist",
+        "data science",
+        "analytics",
+        "business intelligence",
+        "bi ",
+        "decision science",
+        "predictive analytics",
+        "statistical modeling",
+    ],
+    "Finance": [
+        "finance",
+        "financial",
+        "fp&a",
+        "treasury",
+        "controller",
+        "corporate finance",
+        "business finance",
+        "investment banking",
+        "fund accounting",
+        "taxation",
+        "cfo",
+    ],
+    "Cybersecurity": [
+        "cybersecurity",
+        "cyber security",
+        "information security",
+        "infosec",
+        "ciso",
+        "soc",
+        "grc",
+        "application security",
+        "appsec",
+        "cloud security",
+        "network security",
+        "data security",
+        "vulnerability management",
+        "penetration testing",
+        "incident response",
+        "threat intelligence",
+        "threat hunting",
+        "identity access management",
+        "iam",
+    ],
+    "Digital Transformation": [
+        "digital transformation",
+        "business transformation",
+        "technology transformation",
+        "enterprise transformation",
+        "process transformation",
+        "automation transformation",
+        "digital strategy",
+        "digital innovation",
+        "digital adoption",
+    ],
+    "General Management": [
+        "general manager",
+        "deputy general manager",
+        "business manager",
+        "business head",
+        "business unit manager",
+        "business operations",
+        "p&l",
+        "profit and loss",
+    ],
+}
+
+VERTICAL_WEAK_KEYWORDS = {
+    "Data Science": [
+        "business analyst",
+        "data analyst",
+        "analytics",
+        "insights manager",
+        "data strategy",
+    ],
+    "Finance": [
+        "investment",
+        "risk management",
+        "audit",
+        "accounting",
+        "controller",
+    ],
+    "Cybersecurity": [
+        "security manager",
+        "security lead",
+        "security director",
+        "head of security",
+        "security operations",
+        "security audit",
+        "security risk",
+        "threat",
+    ],
+    "Digital Transformation": [
+        "transformation manager",
+        "transformation lead",
+        "digital operations",
+        "digital program",
+    ],
+    "General Management": [
+        "operations manager",
+        "regional manager",
+        "area manager",
+        "branch manager",
+        "city manager",
+        "growth manager",
+        "category manager",
+        "commercial manager",
+        "revenue manager",
+    ],
+}
+
+VERTICAL_CONTEXT_KEYWORDS = {
+    "Data Science": [
+        "data",
+        "analytics",
+        "business intelligence",
+        "bi",
+        "insights",
+        "statistics",
+        "modeling",
+    ],
+    "Finance": [
+        "finance",
+        "financial",
+        "fp&a",
+        "treasury",
+        "corporate finance",
+        "accounting",
+        "tax",
+        "investment banking",
+    ],
+    "Cybersecurity": [
+        "cyber",
+        "information security",
+        "infosec",
+        "network",
+        "cloud",
+        "application",
+        "soc",
+        "grc",
+        "iam",
+        "vulnerability",
+        "incident",
+        "threat intelligence",
+    ],
+    "Digital Transformation": [
+        "digital",
+        "technology",
+        "automation",
+        "enterprise",
+        "process",
+        "business transformation",
+    ],
+    "General Management": [
+        "business",
+        "operations",
+        "p&l",
+        "profit and loss",
+        "regional",
+        "commercial",
+        "revenue",
+        "category",
+    ],
+}
+
 
 def classify_jobs(jobs: list[dict]) -> list[dict]:
     for job in jobs:
@@ -517,6 +790,12 @@ def validate_jobs_for_vertical(
         title_text = clean_text(job.get("job_title", ""))
         searchable_text = build_searchable_text(job)
 
+        if has_negative_vertical_signal(searchable_text, vertical):
+            continue
+
+        if has_weak_vertical_signal_without_context(searchable_text, vertical):
+            continue
+
         if vertical == "Strategy Leadership" and not has_strategy_title_signal(title_text):
             continue
 
@@ -543,6 +822,24 @@ def validate_jobs_for_vertical(
             kept_jobs.append(job)
 
     return kept_jobs
+
+
+def has_negative_vertical_signal(text: str, vertical: str) -> bool:
+    negative_keywords = VERTICAL_NEGATIVE_KEYWORDS.get(vertical, [])
+    return contains_keyword(text, negative_keywords)
+
+
+def has_weak_vertical_signal_without_context(text: str, vertical: str) -> bool:
+    weak_keywords = VERTICAL_WEAK_KEYWORDS.get(vertical, [])
+    if not weak_keywords or not contains_keyword(text, weak_keywords):
+        return False
+
+    strong_keywords = VERTICAL_STRONG_KEYWORDS.get(vertical, [])
+    context_keywords = VERTICAL_CONTEXT_KEYWORDS.get(vertical, [])
+    return not (
+        contains_keyword(text, strong_keywords)
+        or contains_keyword(text, context_keywords)
+    )
 
 
 def is_valid_vertical_match(
