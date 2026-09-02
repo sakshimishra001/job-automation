@@ -1,460 +1,7 @@
 {
-  "last_successful_run": "2026-09-01T09:32:31.540328Z",
+  "last_successful_run": "2026-09-02T08:56:48.666565Z",
   "email_reporting": {
     "history": [
-      {
-        "run_date": "2026-08-11",
-        "vertical_counts": {
-          "Product Management": 3,
-          "Project Management": 5,
-          "CXO / Executive Leadership": 8,
-          "AI / ML": 5,
-          "Data Science": 3,
-          "Finance": 10,
-          "HR": 9,
-          "Cybersecurity": 3,
-          "Digital Transformation": 1,
-          "Senior Management": 4,
-          "General Management": 5,
-          "Strategy Leadership": 6
-        },
-        "jobs": [
-          {
-            "vertical": "Product Management",
-            "job_title": "Product Manager, Platform Enhancements",
-            "apply_link": "https://in.linkedin.com/jobs/view/product-manager-platform-enhancements-at-s-p-global-4451606071",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/product-manager-platform-enhancements-at-s-p-global-4451606071",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Product Management",
-            "job_title": "Senior Product Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-product-manager-at-spinny-4451127124",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-product-manager-at-spinny-4451127124",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Product Management",
-            "job_title": "Director, Product Management",
-            "apply_link": "https://in.linkedin.com/jobs/view/director-product-management-at-adobe-4451421150",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/director-product-management-at-adobe-4451421150",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Project Management",
-            "job_title": "Group Project Manager GCC",
-            "apply_link": "https://in.linkedin.com/jobs/view/group-project-manager-gcc-at-infosys-4441795229",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/group-project-manager-gcc-at-infosys-4441795229",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Project Management",
-            "job_title": "Program Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/program-manager-at-nielseniq-4451175682",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/program-manager-at-nielseniq-4451175682",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Project Management",
-            "job_title": "Project Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/project-manager-at-ey-4437286288",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/project-manager-at-ey-4437286288",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Project Management",
-            "job_title": "Program Management Leader",
-            "apply_link": "https://in.linkedin.com/jobs/view/program-management-leader-at-eaton-4449566978",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/program-management-leader-at-eaton-4449566978",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Project Management",
-            "job_title": "Team Lead - PMO ( 82922612 )",
-            "apply_link": "https://in.linkedin.com/jobs/view/team-lead-pmo-82922612-at-reliance-industries-limited-4451125439",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/team-lead-pmo-82922612-at-reliance-industries-limited-4451125439",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "CXO / Executive Leadership",
-            "job_title": "Managing Director- IT Staffing and Consulting Operations",
-            "apply_link": "https://in.linkedin.com/jobs/view/managing-director-it-staffing-and-consulting-operations-at-tech-consulting-4449225968",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/managing-director-it-staffing-and-consulting-operations-at-tech-consulting-4449225968",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "CXO / Executive Leadership",
-            "job_title": "Senior Vice President Operations",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-vice-president-operations-at-iks-health-4448747921",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-vice-president-operations-at-iks-health-4448747921",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "CXO / Executive Leadership",
-            "job_title": "Vice President of Engineering",
-            "apply_link": "https://in.linkedin.com/jobs/view/vice-president-of-engineering-at-talentbridge-4451458474",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/vice-president-of-engineering-at-talentbridge-4451458474",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "CXO / Executive Leadership",
-            "job_title": "Vice President Delivery",
-            "apply_link": "https://in.linkedin.com/jobs/view/vice-president-delivery-at-gramener-4449543366",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/vice-president-delivery-at-gramener-4449543366",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "CXO / Executive Leadership",
-            "job_title": "Vice President, Finance Systems (R-19449)",
-            "apply_link": "https://in.linkedin.com/jobs/view/vice-president-finance-systems-r-19449-at-dun-bradstreet-4448746687",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/vice-president-finance-systems-r-19449-at-dun-bradstreet-4448746687",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "CXO / Executive Leadership",
-            "job_title": "Chief Commercial Officer",
-            "apply_link": "https://in.linkedin.com/jobs/view/chief-commercial-officer-at-jsw-sports-pvt-ltd-4452191585",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-commercial-officer-at-jsw-sports-pvt-ltd-4452191585",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "CXO / Executive Leadership",
-            "job_title": "Chief Executive Officer",
-            "apply_link": "https://in.linkedin.com/jobs/view/chief-executive-officer-at-raintree-foundation-4422317984",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-executive-officer-at-raintree-foundation-4422317984",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "CXO / Executive Leadership",
-            "job_title": "Chief of Staff \u2013 CEO's Office",
-            "apply_link": "https://in.linkedin.com/jobs/view/chief-of-staff-%E2%80%93-ceo-s-office-at-icon-global-services-ltd-4451627694",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-of-staff-%E2%80%93-ceo-s-office-at-icon-global-services-ltd-4451627694",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "AI / ML",
-            "job_title": "Artificial Intelligence Engineer",
-            "apply_link": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-at-the-lhr-group-4451514585",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-at-the-lhr-group-4451514585",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "AI / ML",
-            "job_title": "Lead AI Engineer \u2013 Manufacturing & Generative AI",
-            "apply_link": "https://in.linkedin.com/jobs/view/lead-ai-engineer-%E2%80%93-manufacturing-generative-ai-at-applix-4451131096",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/lead-ai-engineer-%E2%80%93-manufacturing-generative-ai-at-applix-4451131096",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "AI / ML",
-            "job_title": "Senior AI Engineer",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-infinity-learn-4451543655",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-infinity-learn-4451543655",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "AI / ML",
-            "job_title": "Senior AI Engineer",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-dunnhumby-4451514038",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-dunnhumby-4451514038",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "AI / ML",
-            "job_title": "Senior AI Engineer",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-bigstep-technologies-4449541452",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-bigstep-technologies-4449541452",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Data Science",
-            "job_title": "Data Scientist",
-            "apply_link": "https://in.linkedin.com/jobs/view/data-scientist-at-ht-digital-streams-4451339722",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/data-scientist-at-ht-digital-streams-4451339722",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Data Science",
-            "job_title": "Data Analytics Specialist",
-            "apply_link": "https://in.linkedin.com/jobs/view/data-analytics-specialist-at-ey-4440107736",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/data-analytics-specialist-at-ey-4440107736",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Data Science",
-            "job_title": "Director Data Science",
-            "apply_link": "https://in.linkedin.com/jobs/view/director-data-science-at-white-force-group-4451525469",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/director-data-science-at-white-force-group-4451525469",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Financial Planning and Analysis Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/financial-planning-and-analysis-manager-at-gokwik-4451616943",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/financial-planning-and-analysis-manager-at-gokwik-4451616943",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Financial Controller",
-            "apply_link": "https://in.linkedin.com/jobs/view/financial-controller-at-geomett-box-pvt-ltd-4449835325",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/financial-controller-at-geomett-box-pvt-ltd-4449835325",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Financial Controller",
-            "apply_link": "https://in.linkedin.com/jobs/view/financial-controller-at-ad-astra-consultants-4449540257",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/financial-controller-at-ad-astra-consultants-4449540257",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Senior Finance Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-finance-manager-at-corenza-4451529460",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-finance-manager-at-corenza-4451529460",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Business Finance Head",
-            "apply_link": "https://in.linkedin.com/jobs/view/business-finance-head-at-fundamento-4450944505",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/business-finance-head-at-fundamento-4450944505",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Head of Finance Admin and HR",
-            "apply_link": "https://in.linkedin.com/jobs/view/head-of-finance-admin-and-hr-at-shooting-stars-foundation-4451491294",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/head-of-finance-admin-and-hr-at-shooting-stars-foundation-4451491294",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "HEAD \u2014 FINANCE, CONTROL & ACCOUNTS (FC&A) \u2014 SWADESH",
-            "apply_link": "https://in.linkedin.com/jobs/view/head-%E2%80%94-finance-control-accounts-fc-a-%E2%80%94-swadesh-at-reliance-retail-4451399658",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/head-%E2%80%94-finance-control-accounts-fc-a-%E2%80%94-swadesh-at-reliance-retail-4451399658",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Head - Finance, Exports F&L",
-            "apply_link": "https://in.linkedin.com/jobs/view/head-finance-exports-f-l-at-reliance-retail-4449561008",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/head-finance-exports-f-l-at-reliance-retail-4449561008",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Chief Financial Officer",
-            "apply_link": "https://in.linkedin.com/jobs/view/chief-financial-officer-at-texor-energy-solutions-private-limited-4451612982",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-financial-officer-at-texor-energy-solutions-private-limited-4451612982",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Finance",
-            "job_title": "Chief Financial Officer",
-            "apply_link": "https://in.linkedin.com/jobs/view/chief-financial-officer-at-sun-icon-ventures-4451627709",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-financial-officer-at-sun-icon-ventures-4451627709",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "Human Resources Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/human-resources-manager-at-bobst-4452179452",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/human-resources-manager-at-bobst-4452179452",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "Talent Acquisition Specialist",
-            "apply_link": "https://in.linkedin.com/jobs/view/talent-acquisition-specialist-at-dbm-vircon-4451550199",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/talent-acquisition-specialist-at-dbm-vircon-4451550199",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "Assistant Manager - Human Resources",
-            "apply_link": "https://in.linkedin.com/jobs/view/assistant-manager-human-resources-at-devx-4449245873",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/assistant-manager-human-resources-at-devx-4449245873",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "US Recruitment (PST)",
-            "apply_link": "https://in.linkedin.com/jobs/view/us-recruitment-pst-at-ltm-4451119747",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/us-recruitment-pst-at-ltm-4451119747",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "Head of Human Resources",
-            "apply_link": "https://in.linkedin.com/jobs/view/head-of-human-resources-at-giskernel-4451617785",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/head-of-human-resources-at-giskernel-4451617785",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "Head of Human Resources Operations",
-            "apply_link": "https://in.linkedin.com/jobs/view/head-of-human-resources-operations-at-myoperator-4449562509",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/head-of-human-resources-operations-at-myoperator-4449562509",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "GCC Human Resources - Director",
-            "apply_link": "https://in.linkedin.com/jobs/view/gcc-human-resources-director-at-fossil-group-inc-4451873323",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/gcc-human-resources-director-at-fossil-group-inc-4451873323",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "Head of HR",
-            "apply_link": "https://in.linkedin.com/jobs/view/head-of-hr-at-octave-4451416788",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/head-of-hr-at-octave-4451416788",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "HR",
-            "job_title": "HR Director, Emerging Markets",
-            "apply_link": "https://in.linkedin.com/jobs/view/hr-director-emerging-markets-at-lincoln-international-4433442010",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/hr-director-emerging-markets-at-lincoln-international-4433442010",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Cybersecurity",
-            "job_title": "Sr Mgr Information Security",
-            "apply_link": "https://in.linkedin.com/jobs/view/sr-mgr-information-security-at-amgen-4441488713",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/sr-mgr-information-security-at-amgen-4441488713",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Cybersecurity",
-            "job_title": "Lead Manager - Information Security",
-            "apply_link": "https://in.linkedin.com/jobs/view/lead-manager-information-security-at-infosys-4433622504",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/lead-manager-information-security-at-infosys-4433622504",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Cybersecurity",
-            "job_title": "Chief Information Security Officer (m/f)",
-            "apply_link": "https://in.linkedin.com/jobs/view/chief-information-security-officer-m-f-at-dutch-caribbean-air-navigation-service-provider-dc-ansp-4443859991",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-information-security-officer-m-f-at-dutch-caribbean-air-navigation-service-provider-dc-ansp-4443859991",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Digital Transformation",
-            "job_title": "Manager - Business Transformation",
-            "apply_link": "https://in.linkedin.com/jobs/view/manager-business-transformation-at-messe-muenchen-india-4451524715",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/manager-business-transformation-at-messe-muenchen-india-4451524715",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Senior Management",
-            "job_title": "Associate Director - Risk Consulting",
-            "apply_link": "https://in.linkedin.com/jobs/view/associate-director-risk-consulting-at-marsh-risk-4448644041",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/associate-director-risk-consulting-at-marsh-risk-4448644041",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Senior Management",
-            "job_title": "Senior Manager - Capital Reporting",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-manager-capital-reporting-at-standard-chartered-india-4451405629",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-manager-capital-reporting-at-standard-chartered-india-4451405629",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Senior Management",
-            "job_title": "Senior Manager, Project Control (Head of Project Controls, India)",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-manager-project-control-head-of-project-controls-india-at-kbr-inc-4451532163",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-manager-project-control-head-of-project-controls-india-at-kbr-inc-4451532163",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Senior Management",
-            "job_title": "Senior Manager Project Pursuits",
-            "apply_link": "https://in.linkedin.com/jobs/view/senior-manager-project-pursuits-at-emerson-4451375924",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-manager-project-pursuits-at-emerson-4451375924",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "General Management",
-            "job_title": "Business Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/business-manager-at-abcd-aditya-birla-capital-digital-4452198747",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/business-manager-at-abcd-aditya-birla-capital-digital-4452198747",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "General Management",
-            "job_title": "Operations Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/operations-manager-at-ownly-4451651446",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/operations-manager-at-ownly-4451651446",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "General Management",
-            "job_title": "Regional Manager- Business Development- Passives- Delhi",
-            "apply_link": "https://in.linkedin.com/jobs/view/regional-manager-business-development-passives-delhi-at-aditya-birla-capital-4442546698",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/regional-manager-business-development-passives-delhi-at-aditya-birla-capital-4442546698",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "General Management",
-            "job_title": "DEPUTY BUSINESS HEAD \u2014 SWADESH",
-            "apply_link": "https://in.linkedin.com/jobs/view/deputy-business-head-%E2%80%94-swadesh-at-reliance-retail-4451507382",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/deputy-business-head-%E2%80%94-swadesh-at-reliance-retail-4451507382",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "General Management",
-            "job_title": "Business Head - Energy Process Sales",
-            "apply_link": "https://in.linkedin.com/jobs/view/business-head-energy-process-sales-at-alfa-laval-4451548431",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/business-head-energy-process-sales-at-alfa-laval-4451548431",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Strategy Leadership",
-            "job_title": "Manager- Corporate Strategy",
-            "apply_link": "https://in.linkedin.com/jobs/view/manager-corporate-strategy-at-glenmark-pharmaceuticals-4449562302",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/manager-corporate-strategy-at-glenmark-pharmaceuticals-4449562302",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Strategy Leadership",
-            "job_title": "Deputy Manager - Business Strategy",
-            "apply_link": "https://in.linkedin.com/jobs/view/deputy-manager-business-strategy-at-indofast-energy-4451524179",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/deputy-manager-business-strategy-at-indofast-energy-4451524179",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Strategy Leadership",
-            "job_title": "Business Transformation Assoc Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/business-transformation-assoc-manager-at-accenture-services-pvt-ltd-4451464162",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/business-transformation-assoc-manager-at-accenture-services-pvt-ltd-4451464162",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Strategy Leadership",
-            "job_title": "Strategy Project Manager",
-            "apply_link": "https://in.linkedin.com/jobs/view/strategy-project-manager-at-hitachi-energy-4451571122",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/strategy-project-manager-at-hitachi-energy-4451571122",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Strategy Leadership",
-            "job_title": "Platform Transformation Lead - VP",
-            "apply_link": "https://in.linkedin.com/jobs/view/platform-transformation-lead-vp-at-barclays-4452182409",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/platform-transformation-lead-vp-at-barclays-4452182409",
-            "publisher": "LinkedIn"
-          },
-          {
-            "vertical": "Strategy Leadership",
-            "job_title": "Strategy & Operations - Founder's Office",
-            "apply_link": "https://in.linkedin.com/jobs/view/strategy-operations-founder-s-office-at-hevo-data-4451624766",
-            "company_apply_url": "https://in.linkedin.com/jobs/view/strategy-operations-founder-s-office-at-hevo-data-4451624766",
-            "publisher": "LinkedIn"
-          }
-        ]
-      },
       {
         "run_date": "2026-08-12",
         "vertical_counts": {
@@ -14700,6 +14247,620 @@
             "job_title": "Director Corporate Strategy",
             "apply_link": "https://in.linkedin.com/jobs/view/director-corporate-strategy-at-tbo-com-4448273970",
             "company_apply_url": "https://in.linkedin.com/jobs/view/director-corporate-strategy-at-tbo-com-4448273970",
+            "publisher": "LinkedIn"
+          }
+        ]
+      },
+      {
+        "run_date": "2026-09-02",
+        "vertical_counts": {
+          "Product Management": 11,
+          "Project Management": 5,
+          "CXO / Executive Leadership": 10,
+          "AI / ML": 2,
+          "Data Science": 5,
+          "Finance": 15,
+          "HR": 12,
+          "Cybersecurity": 3,
+          "Digital Transformation": 0,
+          "Senior Management": 7,
+          "General Management": 10,
+          "Strategy Leadership": 5
+        },
+        "jobs": [
+          {
+            "vertical": "Product Management",
+            "job_title": "Sr Product Manager - Marketplace",
+            "apply_link": "https://in.linkedin.com/jobs/view/sr-product-manager-marketplace-at-target-4460688628",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/sr-product-manager-marketplace-at-target-4460688628",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Senior Product Manager \u2013 Product Lead (Multi-Pod) | Product Strategy & Cross-Functional Leadership",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-product-manager-%E2%80%93-product-lead-multi-pod-product-strategy-cross-functional-leadership-at-office-beacon-aspl-4459286479",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-product-manager-%E2%80%93-product-lead-multi-pod-product-strategy-cross-functional-leadership-at-office-beacon-aspl-4459286479",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Senior Product Manager - Conversational AI",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-product-manager-conversational-ai-at-idfc-first-bank-4460667896",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-product-manager-conversational-ai-at-idfc-first-bank-4460667896",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Senior Product Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-product-manager-at-microsoft-4461744090",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-product-manager-at-microsoft-4461744090",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Senior Product Manager - Cisco Wireless",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-product-manager-cisco-wireless-at-cisco-4448146910",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-product-manager-cisco-wireless-at-cisco-4448146910",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Principal Product Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/principal-product-manager-at-sabre-4460945635",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/principal-product-manager-at-sabre-4460945635",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Senior Product Manager II",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-product-manager-ii-at-nielsen-4459531220",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-product-manager-ii-at-nielsen-4459531220",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Product Head",
+            "apply_link": "https://in.linkedin.com/jobs/view/product-head-at-the-premier-consultants-recruitment-company-4461574310",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/product-head-at-the-premier-consultants-recruitment-company-4461574310",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Product Lead",
+            "apply_link": "https://in.linkedin.com/jobs/view/product-lead-at-hdfc-securities-4458878194",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/product-lead-at-hdfc-securities-4458878194",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Head of Product Development & Merchandising- Jewelry",
+            "apply_link": "https://in.linkedin.com/jobs/view/head-of-product-development-merchandising-jewelry-at-v-a-group-4459280950",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/head-of-product-development-merchandising-jewelry-at-v-a-group-4459280950",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Product Management",
+            "job_title": "Director Tech Product Management",
+            "apply_link": "https://in.linkedin.com/jobs/view/director-tech-product-management-at-optum-india-4460936414",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/director-tech-product-management-at-optum-india-4460936414",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Project Management",
+            "job_title": "Sr. Program Manager, Brand Protections",
+            "apply_link": "https://in.linkedin.com/jobs/view/sr-program-manager-brand-protections-at-amazon-4461239802",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/sr-program-manager-brand-protections-at-amazon-4461239802",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Project Management",
+            "job_title": "Program Manager, Evaluation Board Programs",
+            "apply_link": "https://in.linkedin.com/jobs/view/program-manager-evaluation-board-programs-at-renesas-electronics-4462131883",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/program-manager-evaluation-board-programs-at-renesas-electronics-4462131883",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Project Management",
+            "job_title": "Director Project Management",
+            "apply_link": "https://in.linkedin.com/jobs/view/director-project-management-at-ennovi-4460605606",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/director-project-management-at-ennovi-4460605606",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Project Management",
+            "job_title": "Director, Project / Program Management",
+            "apply_link": "https://in.linkedin.com/jobs/view/director-project-program-management-at-analog-devices-4448449380",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/director-project-program-management-at-analog-devices-4448449380",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Project Management",
+            "job_title": "Director Technical Project Management",
+            "apply_link": "https://in.linkedin.com/jobs/view/director-technical-project-management-at-optum-india-4460924463",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/director-technical-project-management-at-optum-india-4460924463",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "Finance Controller \u2013 Senior Vice President",
+            "apply_link": "https://in.linkedin.com/jobs/view/finance-controller-%E2%80%93-senior-vice-president-at-stellar-talent-hr-consultancy-llp-4460245857",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/finance-controller-%E2%80%93-senior-vice-president-at-stellar-talent-hr-consultancy-llp-4460245857",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "CEO \u2013 Chief Executive Officer",
+            "apply_link": "https://in.linkedin.com/jobs/view/ceo-%E2%80%93-chief-executive-officer-at-emriom-solutions-4460264044",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/ceo-%E2%80%93-chief-executive-officer-at-emriom-solutions-4460264044",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "Vice President - Claims",
+            "apply_link": "https://in.linkedin.com/jobs/view/vice-president-claims-at-axis-max-life-insurance-limited-4458871890",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/vice-president-claims-at-axis-max-life-insurance-limited-4458871890",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "Vice president HRD",
+            "apply_link": "https://in.linkedin.com/jobs/view/vice-president-hrd-at-sentini-group-4458871867",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/vice-president-hrd-at-sentini-group-4458871867",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "2LOD Portfolio Risk Credit Officer - Vice President",
+            "apply_link": "https://in.linkedin.com/jobs/view/2lod-portfolio-risk-credit-officer-vice-president-at-citi-4460650771",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/2lod-portfolio-risk-credit-officer-vice-president-at-citi-4460650771",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "Chief Executive Officer@Coimbatore",
+            "apply_link": "https://in.linkedin.com/jobs/view/chief-executive-officer%40coimbatore-at-amrita-vishwa-vidyapeetham-4459565523",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-executive-officer%40coimbatore-at-amrita-vishwa-vidyapeetham-4459565523",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "Chief Executive Officer - EPC",
+            "apply_link": "https://in.linkedin.com/jobs/view/chief-executive-officer-epc-at-akmv-consultants-4460953286",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-executive-officer-epc-at-akmv-consultants-4460953286",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "Chief Technology Officer - India - Social Media",
+            "apply_link": "https://in.linkedin.com/jobs/view/chief-technology-officer-india-social-media-at-stealth-startup-delaware-delhi-4459901769",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-technology-officer-india-social-media-at-stealth-startup-delaware-delhi-4459901769",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "Co Founder ( CTO) : AI Technical with Investment",
+            "apply_link": "https://in.linkedin.com/jobs/view/co-founder-cto-ai-technical-with-investment-at-sellers-login-4459541979",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/co-founder-cto-ai-technical-with-investment-at-sellers-login-4459541979",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "CXO / Executive Leadership",
+            "job_title": "Chief Technology Officer",
+            "apply_link": "https://in.linkedin.com/jobs/view/chief-technology-officer-at-cyopspath-job-directory-4459575779",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-technology-officer-at-cyopspath-job-directory-4459575779",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "AI / ML",
+            "job_title": "Senior Specialist - AI Strategy (Mobility)",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-specialist-ai-strategy-mobility-at-eaton-4440151718",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-specialist-ai-strategy-mobility-at-eaton-4440151718",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "AI / ML",
+            "job_title": "Lead AI Engineer",
+            "apply_link": "https://in.linkedin.com/jobs/view/lead-ai-engineer-at-epam-systems-4459592852",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/lead-ai-engineer-at-epam-systems-4459592852",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Data Science",
+            "job_title": "Analytics Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/analytics-manager-at-pocket-fm-4459551373",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/analytics-manager-at-pocket-fm-4459551373",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Data Science",
+            "job_title": "Data Science Lead",
+            "apply_link": "https://in.linkedin.com/jobs/view/data-science-lead-at-alight-solutions-4461225469",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/data-science-lead-at-alight-solutions-4461225469",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Data Science",
+            "job_title": "Head - Data & Analytics",
+            "apply_link": "https://in.linkedin.com/jobs/view/head-data-analytics-at-suzlon-group-4459564396",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/head-data-analytics-at-suzlon-group-4459564396",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Data Science",
+            "job_title": "Engagement Lead - Data Science",
+            "apply_link": "https://in.linkedin.com/jobs/view/engagement-lead-data-science-at-roche-4462080023",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/engagement-lead-data-science-at-roche-4462080023",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Data Science",
+            "job_title": "Gen AI-Lead AI and Data Science Engineer II",
+            "apply_link": "https://in.linkedin.com/jobs/view/gen-ai-lead-ai-and-data-science-engineer-ii-at-deloitte-4440237543",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/gen-ai-lead-ai-and-data-science-engineer-ii-at-deloitte-4440237543",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Financial Controller",
+            "apply_link": "https://in.linkedin.com/jobs/view/financial-controller-at-aptita-4461551889",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/financial-controller-at-aptita-4461551889",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Finance Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/finance-manager-at-driffle-4460259138",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/finance-manager-at-driffle-4460259138",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Relationship Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/relationship-manager-at-ssj-finance-securities-4459905957",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/relationship-manager-at-ssj-finance-securities-4459905957",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Senior Finance Manager \u2013 D2C & E-commerce",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-finance-manager-%E2%80%93-d2c-e-commerce-at-the-artment-4459518856",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-finance-manager-%E2%80%93-d2c-e-commerce-at-the-artment-4459518856",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Senior Manager - Business Finance",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-manager-business-finance-at-urban-company-4459511016",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-manager-business-finance-at-urban-company-4459511016",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "GBS Finance Hyderabad Centre Head - Food Ingredients",
+            "apply_link": "https://in.linkedin.com/jobs/view/gbs-finance-hyderabad-centre-head-food-ingredients-at-iff-4452479020",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/gbs-finance-hyderabad-centre-head-food-ingredients-at-iff-4452479020",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Associate Vice President - Accounts (Consolidation)",
+            "apply_link": "https://in.linkedin.com/jobs/view/associate-vice-president-accounts-consolidation-at-jsw-energy-ltd-4458082738",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/associate-vice-president-accounts-consolidation-at-jsw-energy-ltd-4458082738",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "SBU Head - Finance Control & Legal",
+            "apply_link": "https://in.linkedin.com/jobs/view/sbu-head-finance-control-legal-at-adani-realty-4454405426",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/sbu-head-finance-control-legal-at-adani-realty-4454405426",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Financial Industry Controller",
+            "apply_link": "https://in.linkedin.com/jobs/view/financial-industry-controller-at-atos-4459855003",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/financial-industry-controller-at-atos-4459855003",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Vice President Business Finance",
+            "apply_link": "https://in.linkedin.com/jobs/view/vice-president-business-finance-at-omega-healthcare-management-services-4460253667",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/vice-president-business-finance-at-omega-healthcare-management-services-4460253667",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Head - Financial Reporting and Tax Risk",
+            "apply_link": "https://in.linkedin.com/jobs/view/head-financial-reporting-and-tax-risk-at-hsbc-4459195005",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/head-financial-reporting-and-tax-risk-at-hsbc-4459195005",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Director - Real Estate Budget & Financial Planning (India & APAC)",
+            "apply_link": "https://in.linkedin.com/jobs/view/director-real-estate-budget-financial-planning-india-apac-at-cognizant-4453529801",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/director-real-estate-budget-financial-planning-india-apac-at-cognizant-4453529801",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Director \u2013 Finance Transformation, Cost FTC",
+            "apply_link": "https://in.linkedin.com/jobs/view/director-%E2%80%93-finance-transformation-cost-ftc-at-barclays-4459904199",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/director-%E2%80%93-finance-transformation-cost-ftc-at-barclays-4459904199",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "Vice President",
+            "apply_link": "https://in.linkedin.com/jobs/view/vice-president-at-iks-health-4459922222",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/vice-president-at-iks-health-4459922222",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Finance",
+            "job_title": "VP- Central P&A - CCAR & Earnings",
+            "apply_link": "https://in.linkedin.com/jobs/view/vp-central-p-a-ccar-earnings-at-jpmorganchase-4460515709",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/vp-central-p-a-ccar-earnings-at-jpmorganchase-4460515709",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Head Human Resources and Admin",
+            "apply_link": "https://in.linkedin.com/jobs/view/head-human-resources-and-admin-at-tgm-services-4459777894",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/head-human-resources-and-admin-at-tgm-services-4459777894",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Human Resources - Manager HR Operations & Employee Life Cycle",
+            "apply_link": "https://in.linkedin.com/jobs/view/human-resources-manager-hr-operations-employee-life-cycle-at-ultratech-cement-4459932477",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/human-resources-manager-hr-operations-employee-life-cycle-at-ultratech-cement-4459932477",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Talent Acquisition Specialist",
+            "apply_link": "https://in.linkedin.com/jobs/view/talent-acquisition-specialist-at-careertiq-4460961591",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/talent-acquisition-specialist-at-careertiq-4460961591",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Human Resources Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/human-resources-manager-at-iteach-schools-4459298624",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/human-resources-manager-at-iteach-schools-4459298624",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Head of People, India",
+            "apply_link": "https://in.linkedin.com/jobs/view/head-of-people-india-at-nothing-4451624284",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/head-of-people-india-at-nothing-4451624284",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "General Manager (HR) | Logistic Industry based in Central India",
+            "apply_link": "https://in.linkedin.com/jobs/view/general-manager-hr-logistic-industry-based-in-central-india-at-confidential-4459927224",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/general-manager-hr-logistic-industry-based-in-central-india-at-confidential-4459927224",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "GM - HR | One of the Large university in Punjab",
+            "apply_link": "https://in.linkedin.com/jobs/view/gm-hr-one-of-the-large-university-in-punjab-at-fyndbridge-consultants-advisors-4458405446",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/gm-hr-one-of-the-large-university-in-punjab-at-fyndbridge-consultants-advisors-4458405446",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Senior Human Resources Business Partner",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-human-resources-business-partner-at-innovation-technology-by-design-4461750881",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-human-resources-business-partner-at-innovation-technology-by-design-4461750881",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Vice President Human Resources",
+            "apply_link": "https://in.linkedin.com/jobs/view/vice-president-human-resources-at-avyanna-aviation-academy-4459527785",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/vice-president-human-resources-at-avyanna-aviation-academy-4459527785",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Senior Vice President Human Resources (PSS08026)",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-vice-president-human-resources-pss08026-at-personnel-search-services-group-4433235345",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-vice-president-human-resources-pss08026-at-personnel-search-services-group-4433235345",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Human Resources Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/human-resources-manager-at-confidential-4458851433",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/human-resources-manager-at-confidential-4458851433",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "HR",
+            "job_title": "Human Resources Business Partner",
+            "apply_link": "https://in.linkedin.com/jobs/view/human-resources-business-partner-at-cdmon-india-4459565110",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/human-resources-business-partner-at-cdmon-india-4459565110",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Cybersecurity",
+            "job_title": "Infosec Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/infosec-manager-at-ozonetel-onecxi-4459919861",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/infosec-manager-at-ozonetel-onecxi-4459919861",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Cybersecurity",
+            "job_title": "Information Security",
+            "apply_link": "https://in.linkedin.com/jobs/view/information-security-at-promaynov-advisory-services-pvt-ltd-4460244096",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/information-security-at-promaynov-advisory-services-pvt-ltd-4460244096",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Cybersecurity",
+            "job_title": "Senior Manager - Security Architect",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-manager-security-architect-at-cognizant-4460603523",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-manager-security-architect-at-cognizant-4460603523",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Senior Management",
+            "job_title": "Associate Director, Biostatistical Programming",
+            "apply_link": "https://in.linkedin.com/jobs/view/associate-director-biostatistical-programming-at-bioksha-4459916255",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/associate-director-biostatistical-programming-at-bioksha-4459916255",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Senior Management",
+            "job_title": "Associate Director-Global Payroll-Pune",
+            "apply_link": "https://in.linkedin.com/jobs/view/associate-director-global-payroll-pune-at-bdo-india-4462156537",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/associate-director-global-payroll-pune-at-bdo-india-4462156537",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Senior Management",
+            "job_title": "Associate Director - ServiceNow Platform & Operations",
+            "apply_link": "https://in.linkedin.com/jobs/view/associate-director-servicenow-platform-operations-at-eli-lilly-and-company-4452461874",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/associate-director-servicenow-platform-operations-at-eli-lilly-and-company-4452461874",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Senior Management",
+            "job_title": "Consulting Director",
+            "apply_link": "https://in.linkedin.com/jobs/view/consulting-director-at-visa-4458194430",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/consulting-director-at-visa-4458194430",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Senior Management",
+            "job_title": "Partner/Director",
+            "apply_link": "https://in.linkedin.com/jobs/view/partner-director-at-singhi-advisors-4460829377",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/partner-director-at-singhi-advisors-4460829377",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Senior Management",
+            "job_title": "Senior Manager Operations (UK Life & Pensions)",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-manager-operations-uk-life-pensions-at-hcltech-4461573812",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-manager-operations-uk-life-pensions-at-hcltech-4461573812",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Senior Management",
+            "job_title": "Senior Manager GRAAS Operations",
+            "apply_link": "https://in.linkedin.com/jobs/view/senior-manager-graas-operations-at-bioksha-4459915247",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/senior-manager-graas-operations-at-bioksha-4459915247",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "Business Operations Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/business-operations-manager-at-niyukti-systems-inc-4460945447",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/business-operations-manager-at-niyukti-systems-inc-4460945447",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "M8840: Manager Operations",
+            "apply_link": "https://in.linkedin.com/jobs/view/m8840-manager-operations-at-fedex-4459657902",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/m8840-manager-operations-at-fedex-4459657902",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "Business Operations Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/business-operations-manager-at-accenture-services-pvt-ltd-4460964739",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/business-operations-manager-at-accenture-services-pvt-ltd-4460964739",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "Business Operations Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/business-operations-manager-at-accenture-in-india-4462036909",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/business-operations-manager-at-accenture-in-india-4462036909",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "Business Head \u2013 Hope Technologies Pvt. Ltd.",
+            "apply_link": "https://in.linkedin.com/jobs/view/business-head-%E2%80%93-hope-technologies-pvt-ltd-at-hope-technologies-pvt-ltd-4457459573",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/business-head-%E2%80%93-hope-technologies-pvt-ltd-at-hope-technologies-pvt-ltd-4457459573",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "RMC Business Head",
+            "apply_link": "https://in.linkedin.com/jobs/view/rmc-business-head-at-panchakrishna-construction-pvt-ltd-4460962897",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/rmc-business-head-at-panchakrishna-construction-pvt-ltd-4460962897",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "General Manager - Growth",
+            "apply_link": "https://in.linkedin.com/jobs/view/general-manager-growth-at-swiggy-4460042653",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/general-manager-growth-at-swiggy-4460042653",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "Associate - Business Manager",
+            "apply_link": "https://in.linkedin.com/jobs/view/associate-business-manager-at-jpmorganchase-4459579940",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/associate-business-manager-at-jpmorganchase-4459579940",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "Operations Manager II",
+            "apply_link": "https://in.linkedin.com/jobs/view/operations-manager-ii-at-concentrix-4460922742",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/operations-manager-ii-at-concentrix-4460922742",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "General Management",
+            "job_title": "Regional Manager - MATC, South",
+            "apply_link": "https://in.linkedin.com/jobs/view/regional-manager-matc-south-at-philips-4460265861",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/regional-manager-matc-south-at-philips-4460265861",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Strategy Leadership",
+            "job_title": "Sr.Lead/Manager - Growth",
+            "apply_link": "https://in.linkedin.com/jobs/view/sr-lead-manager-growth-at-browserstack-4451551116",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/sr-lead-manager-growth-at-browserstack-4451551116",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Strategy Leadership",
+            "job_title": "Consultant - SaT - CHS - SaT - S&E - Corporate Strategy - Mumbai",
+            "apply_link": "https://in.linkedin.com/jobs/view/consultant-sat-chs-sat-s-e-corporate-strategy-mumbai-at-ey-4459250229",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/consultant-sat-chs-sat-s-e-corporate-strategy-mumbai-at-ey-4459250229",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Strategy Leadership",
+            "job_title": "#ACN S&C-GN-Strategy- CVS - Consultant",
+            "apply_link": "https://in.linkedin.com/jobs/view/%23acn-s-c-gn-strategy-cvs-consultant-at-accenture-in-india-4455303674",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/%23acn-s-c-gn-strategy-cvs-consultant-at-accenture-in-india-4455303674",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Strategy Leadership",
+            "job_title": "Strategy and Operations Lead, gtech Ads",
+            "apply_link": "https://in.linkedin.com/jobs/view/strategy-and-operations-lead-gtech-ads-at-google-4460969577",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/strategy-and-operations-lead-gtech-ads-at-google-4460969577",
+            "publisher": "LinkedIn"
+          },
+          {
+            "vertical": "Strategy Leadership",
+            "job_title": "Chief of Staff",
+            "apply_link": "https://in.linkedin.com/jobs/view/chief-of-staff-at-cube-4460029306",
+            "company_apply_url": "https://in.linkedin.com/jobs/view/chief-of-staff-at-cube-4460029306",
             "publisher": "LinkedIn"
           }
         ]
