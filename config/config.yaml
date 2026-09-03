@@ -12,6 +12,8 @@ search:
   pages: 1
   request_delay_seconds: 5
   max_queries_per_vertical: 8
+  max_queries_per_vertical_by_vertical:
+    Digital Transformation: 16
   max_jobs_per_source_query: 20
   quota_per_vertical: 15
   minimum_jobs_per_vertical: 8
@@ -61,6 +63,10 @@ search:
       - "Business Transformation"
       - "Technology Transformation"
       - "Digital Strategy"
+      - "Enterprise Transformation"
+      - "Change Management"
+      - "Process Excellence"
+      - "Digital Adoption"
     Senior Management:
       - "Vice President"
       - "Senior Director"
@@ -126,6 +132,12 @@ search:
       - "Technology Transformation Lead"
       - "Digital Program Manager"
       - "Digital Change Manager"
+      - "Enterprise Transformation Manager"
+      - "Change Management Manager"
+      - "Process Excellence Manager"
+      - "Business Process Transformation"
+      - "Digital Adoption Manager"
+      - "ERP Transformation Manager"
     Senior Management:
       - "Senior Manager"
       - "General Manager"
@@ -198,6 +210,12 @@ search:
       - "Digital Adoption"
       - "Automation Transformation"
       - "Transformation Consultant"
+      - "Transformation Program Manager"
+      - "Business Process Excellence"
+      - "Operational Excellence Transformation"
+      - "SAP Transformation"
+      - "Cloud Transformation"
+      - "CRM Transformation"
     Senior Management:
       - "AVP"
       - "Program Director"

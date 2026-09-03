@@ -90,6 +90,27 @@ STRATEGY_TITLE_KEYWORDS = [
     "chief of staff",
 ]
 
+DIGITAL_TRANSFORMATION_TITLE_KEYWORDS = [
+    "digital transformation",
+    "business transformation",
+    "technology transformation",
+    "enterprise transformation",
+    "process transformation",
+    "automation transformation",
+    "transformation program",
+    "business process transformation",
+    "digital strategy",
+    "digital adoption",
+    "change management",
+    "process excellence",
+    "business process excellence",
+    "operational excellence transformation",
+    "sap transformation",
+    "erp transformation",
+    "cloud transformation",
+    "crm transformation",
+]
+
 VERTICAL_KEYWORDS = {
     "Product Management": [
         "product manager",
@@ -395,15 +416,29 @@ VERTICAL_KEYWORDS = {
         "enterprise transformation",
         "process transformation",
         "automation transformation",
+        "transformation program",
+        "transformation program manager",
+        "business process transformation",
         "digital strategy",
         "digital strategy manager",
         "digital innovation",
         "digital adoption",
+        "digital adoption manager",
         "digital change",
         "digital change manager",
         "digital program",
         "digital program manager",
         "digital operations",
+        "change management",
+        "change management manager",
+        "process excellence",
+        "process excellence manager",
+        "business process excellence",
+        "operational excellence transformation",
+        "sap transformation",
+        "erp transformation",
+        "cloud transformation",
+        "crm transformation",
         "transformation consultant",
         "transformation manager",
         "transformation lead",
@@ -559,6 +594,8 @@ VERTICAL_NEGATIVE_KEYWORDS = {
         "graphic designer",
         "content creator",
         "digital sales",
+        "marketing campaign",
+        "performance marketing",
     ],
     "General Management": [
         "store manager",
@@ -639,9 +676,18 @@ VERTICAL_STRONG_KEYWORDS = {
         "enterprise transformation",
         "process transformation",
         "automation transformation",
+        "transformation program",
+        "business process transformation",
         "digital strategy",
         "digital innovation",
         "digital adoption",
+        "change management",
+        "process excellence",
+        "business process excellence",
+        "sap transformation",
+        "erp transformation",
+        "cloud transformation",
+        "crm transformation",
     ],
     "General Management": [
         "general manager",
@@ -740,6 +786,12 @@ VERTICAL_CONTEXT_KEYWORDS = {
         "enterprise",
         "process",
         "business transformation",
+        "change management",
+        "process excellence",
+        "erp",
+        "sap",
+        "cloud transformation",
+        "crm",
     ],
     "General Management": [
         "business",
@@ -862,6 +914,9 @@ def is_valid_vertical_match(
     if vertical == "Strategy Leadership" and has_strategy_title_signal(title_text):
         return target_score >= min_score and target_score >= max(best_score - 1, min_score)
 
+    if vertical == "Digital Transformation" and has_digital_transformation_title_signal(title_text):
+        return target_score >= min_score and target_score >= max(best_score - 1, min_score)
+
     return False
 
 
@@ -933,6 +988,10 @@ def classify_workplace_type(job: dict) -> str:
 
 def has_strategy_title_signal(title: str) -> bool:
     return contains_keyword(title, STRATEGY_TITLE_KEYWORDS)
+
+
+def has_digital_transformation_title_signal(title: str) -> bool:
+    return contains_keyword(title, DIGITAL_TRANSFORMATION_TITLE_KEYWORDS)
 
 
 def classify_vertical(text: str) -> str:

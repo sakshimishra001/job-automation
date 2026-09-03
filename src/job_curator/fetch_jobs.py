@@ -146,7 +146,7 @@ def get_enabled_sources(search_config: dict) -> list[str]:
 def build_vertical_queries(search_config: dict, vertical: str) -> list[dict]:
     role_queries = get_query_variants(search_config, vertical)
     locations = search_config.get("locations", [])
-    max_queries = int(search_config.get("max_queries_per_vertical", len(role_queries)))
+    max_queries = get_max_queries_for_vertical(search_config, vertical, len(role_queries))
     broad_location = str(search_config.get("source_location", "India"))
 
     if not role_queries:
@@ -180,6 +180,15 @@ def build_vertical_queries(search_config: dict, vertical: str) -> list[dict]:
             queries.append(broad_query)
 
     return queries[:max_queries]
+
+
+def get_max_queries_for_vertical(search_config: dict, vertical: str, default_count: int) -> int:
+    default_max = int(search_config.get("max_queries_per_vertical", default_count))
+    overrides = search_config.get("max_queries_per_vertical_by_vertical", {})
+    if not isinstance(overrides, dict):
+        return default_max
+
+    return int(overrides.get(vertical, default_max))
 
 
 def get_query_variants(search_config: dict, vertical: str) -> list[str]:
